@@ -15,15 +15,15 @@ const Header = () =>(
             <div className=" text-center font-bold pr-100">
             <h1>E V E R L A N E</h1>
     </div>
-      <div className="float-left mr-2 pl-15">Holiday Gifting</div>
-      <div className="float-left mr-2">New Arrivals</div>
-      <div className="float-left mr-2">Best-Sellers</div>
-      <div className="float-left mr-2">Clothing</div>
-      <div className="float-left mr-2">Tops & Sweaters</div>
-      <div className="float-left mr-2">Pants & Jeans</div>
-      <div className="float-left mr-2">Outerwear</div>
-      <div className="float-left mr-2">Shoes & Bags</div>
-      <div className="float-left mr-2">Sale</div>
+      <div className="float-left mr-6 pl-40">Holiday Gifting</div>
+      <div className="float-left mr-6">New Arrivals</div>
+      <div className="float-left mr-6">Best-Sellers</div>
+      <div className="float-left mr-6">Clothing</div>
+      <div className="float-left mr-6">Tops & Sweaters</div>
+      <div className="float-left mr-6">Pants & Jeans</div>
+      <div className="float-left mr-6">Outerwear</div>
+      <div className="float-left mr-6">Shoes & Bags</div>
+      <div className="float-left mr-6">Sale</div>
 
             
          </div>
