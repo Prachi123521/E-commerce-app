@@ -1,4 +1,5 @@
-import Header from "./component/Header";
+import { Footer, Header } from "@/component";
+
 
 
 const Home = ()=>(
@@ -6,7 +7,8 @@ const Home = ()=>(
       E-commerce Website
     
   
-    <Header/>
+    <Header />
+    <Footer/>
     </div>
   
   )
