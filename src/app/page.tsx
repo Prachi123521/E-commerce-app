@@ -1,6 +1,6 @@
-import { Footer, Header } from "@/component";
-
-
+import Header from "@/component/header";
+import Footer from "@/component/footer";
+import Navbar from "@/component/Navbar";
 
 const Home = ()=>(
     <div className=" text-center ">
@@ -8,7 +8,12 @@ const Home = ()=>(
     
   
     <Header />
+    <Navbar />
     <Footer/>
+  
+  
+    
+    
     </div>
   
   )
