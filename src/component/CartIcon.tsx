@@ -1,4 +1,4 @@
-import { ShoppingCart, ShoppingCartIcon } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
