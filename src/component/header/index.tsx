@@ -1,22 +1,18 @@
 import { homeimage } from "@/assets";
-import { homeimage1 } from "@/assets/index1";
-import { homeimage2 } from "@/assets/index2";
-import { homeimage3 } from "@/assets/index3";
-import { homeimage4 } from "@/assets/index4";
-import { homeimage5 } from "@/assets/index5";
-import { homeimage6 } from "@/assets/index6";
 
 
 
 import React from "react";
-import HeaderMenu from "../HeaderMenu";
-import Logo from "../Logo";
+import HeaderMenu from "../headermenu";
+import Logo from "../logo";
 import Container from "../container";
-import SearchBar from "../SearchBar";
-import CartIcon from "../CartIcon";
-import User from "../User";
+import SearchBar from "../searchbar";
+import CartIcon from "../carticon";
+import User from "../user";
 import Link from "next/link";
+import Image from "../image";
 import { ArrowRight } from "lucide-react";
+import Collections from "../collections";
 
 
 const Header = () =>{
@@ -26,12 +22,9 @@ return(
 <>
 
      <header className="  border-b  border-bg-gray-500 mb-1 ">
-      <div className="bg-stone-900 text-white text-sm  text-center py-2">
-         Get early access on launches and offers. Sign Up For Texts
-
-
-      
-         <p className="text-white float-right pr-12 ">USD</p>
+      <div className="bg-stone-900 text-white text-sm  text-center py-1 ">
+        <p> Get early access on launches and offers. Sign Up For Texts</p>
+       {/* <p className="text-white flex-right  flex flex-col items-center justify-end  ">USD</p>*/}
       </div>
       
       <Container className="flex items-center justify-between gap-7">
@@ -62,28 +55,15 @@ return(
             <ul className="text-red-700">Sale </ul>
           </div>
         
-  <div className="w-full pl-15">
+  <div className="pl-15">
  <img src={homeimage.src} alt="" />
  </div>
- <div className="pl-15">
- <img src={homeimage1.src} alt="" />
- </div>
- <div className="pl-15">
- <img src={homeimage2.src} alt="" />
- </div>
- <div className="pl-15">
- <img src={homeimage3.src} alt="" />
- </div>
- <div className="pl-15">
- <img src={homeimage4.src} alt="" />
- </div>
- <div className="pl-15">
- <img src={homeimage5.src} alt="" />
- </div>
- <div className="pl-15">
- <img src={homeimage6.src} alt="" />
- </div>
+ <Image/>
+ <Collections/>
 
+ 
+ 
+ 
 
  </>
  

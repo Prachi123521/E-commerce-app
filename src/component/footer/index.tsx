@@ -1,13 +1,13 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import FooterMenu from '../FooterMenu';
+import FooterMenu from '../footermenu';
 
 const Footer= () => {
   return (
     
 
 <footer className="bg-neutral-200 dark:bg-gray-900">
-    <div className="mx-auto w-full max-w-screen-xl">
+    <div className="mx-auto w-full max-w-screen-xl width={194} height={182}">
       <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-5">
         <div>
             <h2 className="mb-6 text-sm font-bold text-gray-900  dark:text-white ">Account</h2>
@@ -88,25 +88,17 @@ const Footer= () => {
             </ul>
         </div>
         <div className='font-light mt-8 flex items-center justify-end'>
-          <div className='bg-stone-100 py-2 px-7  mb-2'>
+          <div className='bg-stone-100 py-2  border-4 p-4  mb-2 bg-white-400 outline-offset '>
             <input type = 'email' placeholder='Email Address'/>
             </div>
-            <div className='bg-stone-900 '>
+            <div className='bg-stone-900 py-2 px-3 border-4 p-4  '>
             <button className='text-white'><ArrowRight/></button>
           </div>
           </div>
             <FooterMenu/>
 
-         {/* <div className='flex w-fit gap-10  mx-auto font-light display-block  '>
-            <ul>Privacy Policy</ul>
-            <ul>Terms Of Service</ul>
-            <ul>Do Not Sell Or Share My Personal Information</ul>
-            <ul>CS Supply Or Chain Transparency</ul>
-            <ul>Vendor Code Of Conduct</ul>
-            <ul>Sitemap Pages</ul>
-            <ul>Sitemap Products</ul>
-          </div>*/}
-         <div className='pt-15 flex items-center text-center font-light '>
+        
+         <div className='pt-15 flex  font-maison-neue  mt-15  '>
             <p> &copy; 2023 All Rights Reserved</p>
           </div>
          </div>
