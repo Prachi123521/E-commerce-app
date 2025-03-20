@@ -10,9 +10,10 @@ import SearchBar from "../searchbar";
 import CartIcon from "../carticon";
 import User from "../user";
 import Link from "next/link";
-import Image from "../image";
+import Image from "../frame1";
 import { ArrowRight } from "lucide-react";
-import Collections from "../collections";
+import Collections from "../frame2";
+//import { FlagofAmerica } from "lucide-react";
 
 
 const Header = () =>{
@@ -22,8 +23,13 @@ return(
 <>
 
      <header className="  border-b  border-bg-gray-500 mb-1 ">
-      <div className="bg-stone-900 text-white text-sm  text-center py-1 ">
-        <p> Get early access on launches and offers. Sign Up For Texts</p>
+      <div className="bg-stone-900 text-white text-sm  text-center py-1  ">
+        <p> Get early access on launches and offers. <span className="underline">Sign Up For Texts</span> </p>
+        <span><ArrowRight/></span>
+        <div className="  display-right justify-end gap-5 ">
+          
+          <p>USD</p>
+        </div>
        {/* <p className="text-white flex-right  flex flex-col items-center justify-end  ">USD</p>*/}
       </div>
       
