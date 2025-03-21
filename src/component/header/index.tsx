@@ -25,11 +25,11 @@ return(
      <header className="  border-b  border-bg-gray-500 mb-1 ">
       <div className="bg-stone-900 text-white text-sm  text-center py-1  ">
         <p> Get early access on launches and offers. <span className="underline">Sign Up For Texts</span> </p>
-        <span><ArrowRight/></span>
-        <div className="  display-right justify-end gap-5 ">
+        {/*<span><ArrowRight/></span>*/}
+       {/* <div className=" space-x-4 ">
           
           <p>USD</p>
-        </div>
+        </div>*/}
        {/* <p className="text-white flex-right  flex flex-col items-center justify-end  ">USD</p>*/}
       </div>
       

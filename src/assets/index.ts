@@ -39,3 +39,43 @@ export{image7};
 
 import image8 from "./image (8).png";
 export{image8};
+
+import image9 from "./image (9).png";
+export{image9};
+
+import image10 from "./image (10).png";
+export{image10};
+
+import image11 from "./image (11).png";
+export{image11};
+
+import image12 from "./image (12).png";
+export{image12};
+
+import image13 from "./image (13).png";
+export{image13};
+
+import frame14 from "./Frame 14.png";
+export{frame14};
+
+import frame20 from "./Frame 20.png";
+export{frame20};
+
+import frame21 from "./Frame 21.png";
+export{frame21};
+
+import frame19 from "./Frame 19.png";
+export{frame19};
+
+import frame22 from "./Frame 22.png";
+export{frame22};
+
+import frame1 from "./Frame 1 (1).png";
+export{frame1};
+
+import frame2 from "./Frame 2.png";
+export {frame2};
+
+import frame3 from "./Frame 3.png";
+export {frame3};
+

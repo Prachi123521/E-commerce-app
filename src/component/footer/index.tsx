@@ -95,7 +95,9 @@ const Footer= () => {
             <button className='text-white'><ArrowRight/></button>
           </div>
           </div>
+    
             <FooterMenu/>
+            
 
         
          <div className='pt-15 flex  font-maison-neue  mt-15  '>
