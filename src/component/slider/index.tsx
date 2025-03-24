@@ -17,33 +17,48 @@ import {frame22} from '@/assets';
 import {frame1} from '@/assets';
 import {frame2} from "@/assets";
 import {frame3} from "@/assets";
+import Slider1 from '../slider1';
 
 
 
 
 const Slider = () => {
-    //const[current,setCurrent]=useState()
+    
   return (
       //<div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'></div>
       <>
+        
+
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 mb-15 width={1316} height={225}">
       <div className="group relative">
-      <div className="mt-4 flex justify-between gap-6">
+      <div className="mt-4 flex justify-between gap-6 ">
         <div className='mt-52 pl-7'>
         <ChevronLeft/>
         </div>
         <img src = {image6.src} alt="" />
-        <p className='absolute inset-0 mt-110 text-sm font-maison-neue ml-18 font-light '>The Waffle Long Sleev Crew  <span className='ml-23 '>$60</span></p>
-        <p className='absolute inset-0 mt-110 text-sm font-maison-neue ml-19 pt-6'>Bone</p>
+        <p className='absolute inset-0 mt-110 text-sm font-maison-neue ml-18  '>The Waffle Long Sleev Crew  <span className='ml-21'>$60</span></p>
+        <p className='absolute inset-0 mt-110 text-sm font-maison-neue ml-19 pt-6 text-gray-500 text-sm'>Bone</p>
         
         <img src = {image7.src} alt="" />
        
-       {/*<p className=' text-center text-x-1/2'>The Bomber Jacket | Uniform </p>*/}
-    
+       <p className='absolute inset-0  flex ml-95 mt-110  font-maison-neue text-sm whitespace-nowrap'>The Bomber Jacket | Uniform <span className='ml-20'>$148</span></p>
+       <p className='absolute flex whitespace-nowrap font-maison-neue ml-95 mt-110 pt-2 text-gray-500 text-sm '>Toasted Coconut</p>
         
         <img src ={image8.src} alt=""/>
+        <p className='absolute inset-0 whitespace-nowrap ml-172 mt-110 tracking-[0.2px] font-maison-neue text-sm'>The Slim 4-Way Stretch Organic Jean | <span className='ml-4'>$98</span><br></br>
+        Uniform </p>
+        <p className='absolute flex whitespace-nowrap  text-sm text-gray-500 font-maison-neue ml-172 pt-6 mt-110'>Dark Indigo</p>
+
+
         <img src ={image9.src} alt=""/>
+        <p className='absolute text-sm font-maison-neue inset-0 whitespace-nowrap ml-249 mt-110 '>The Essential Organic Crew <span className='ml-21'>$30</span></p>
+        <p className='absolute flex text-gray-500 whitespace-nowrap font-maison-neue text-sm ml-250 mt-110 pt-2'>Vintage Black</p>
+
+
+
         <img src ={image10.src} alt=""/>
+        <p className='absolute flex text-sm font-maison-neue whitespace-nowrap ml-325 mt-105'>The Heavyweight</p>
+        <p className='absolute inset-0 text-sm text-gray-500 whitespace-nowrap font-maison-neue ml-325 mt-114'>Heatthered Brown</p>
         <div className="mt-52">
         <ChevronRight/>
         </div>
@@ -52,25 +67,32 @@ const Slider = () => {
       </div>
   
     
+      <Slider1/>
     
     
-      <div className='ml-10 mt-90'>
+      <div className='  ml-20  mt-112 absolute'>
       <ChevronLeft/>
       </div>
       <div>
-      <div className="height={695} width={1400} pr-35 pl-35 flex ">
-      <p className='mt-58 ml-40'>People Are Talking </p>
-      <p className='mt-75  text-xl font-maison-neue'>"Love this shirt! Fits perfectly and <br></br>
+      <div className="height={695} width={1400} pr-35 pl-35 flex pt-35 ">
+      <p className='whitespace-nowrap text-right absolute ml-20  mt-59'>People Are Talking </p>
+      <p className=' text-xl text-bottom mt-75 font-maison-neue ml-19'>"Love this shirt! Fits perfectly and <br></br>
          the fabric is thick without<br></br>
          being stuff."
         
 
       </p>
-      <span className='ml-28'>
+      
+      <span className='ml-45'>
       <img src ={image11.src} alt=""/>
       </span>
+     </div>
       </div>
-      </div>
+      <div className='absolute inset-0 mt-812 ml-350'>
+      <ChevronRight/>
+        </div>
+      <hr className='mt-28 bg-stone-950 '></hr>
+      
 
   
   
@@ -80,14 +102,25 @@ const Slider = () => {
 
   
 
+       <p className='absolute inset-0 mt-980 text-lg font-maison-neue mr-140   text-center'>Our Holiday Gift Picks </p>
+       <p className='absolute inset-0 mt-980 ml-230 text-lg font-maison-neue '>Cleaner Fashion</p>
+      
 
-        <div className='width={505} height={626} pt-55  pl-55 mb-12 flex space-x-3'>
-          
+        <div className='width={505} height={626} pt-55  pl-55 mb-12 flex space-x-4'>
+        
        <img src = {image12.src} alt="" />
        <img src = {image13.src} alt=""  />
+       <p className='absolute ml-149 whitspace-nowrap mt-158 font-light font-maison-neue text-sm  '>See the sustainability efforts behind each of our products.</p>
+       <p className='absolute ml-175 mt-168 underline text-sm font-maison-neue '>Learn More</p>
        </div>
+       <p className='ml-34 absolute inset-0 mt-1150 whitespace-nowrap font-thin  text-[300] text-sm ml-85 mt-'>The best presents for everyone on your list.</p>
+       <p  className='ml-105 font-maison-neue text-sm underline'> Read More</p>
 
-       <p className='text-center text-lg font-maison-neue'>Everlane On You</p>
+       <hr className='mt-25'></hr>
+                                                                                
+      
+
+       <p className='text-center text-3xl font-maison-neue mt-34'>Everlane On You</p>
        <p className='text-center font-light text-sm mt-4'>Share your latest look with # EverlaneOnYou for a chance to be featured.</p>
        <p className='underline text-sm text-center font-light'>Add Your Photo</p>
 
@@ -110,12 +143,14 @@ const Slider = () => {
         </div>
         </div>  
 
-        <div className='flex space-x-4 pl-28 mb-15'>
+        <div className='flex space-x-4 pl-28 mb-32 mt-18'>
          <img src = {frame1.src} alt=""/> 
          <img src = {frame2.src} alt=""/> 
          <img src = {frame3.src} alt=""/> 
       
         </div>
+
+    
 
       
   

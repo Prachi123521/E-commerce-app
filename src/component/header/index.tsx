@@ -10,7 +10,7 @@ import SearchBar from "../searchbar";
 import CartIcon from "../carticon";
 import User from "../user";
 import Link from "next/link";
-import Image from "../frame1";
+import Image from "../category";
 import { ArrowRight } from "lucide-react";
 import Collections from "../frame2";
 //import { FlagofAmerica } from "lucide-react";
@@ -22,14 +22,14 @@ return(
         
 <>
 
-     <header className="  border-b  border-bg-gray-500 mb-1 ">
+     <header className="  border-b  border-bg-gray-500 mb-1 hidden sm:block">
       <div className="bg-stone-900 text-white text-sm  text-center py-1  ">
         <p> Get early access on launches and offers. <span className="underline">Sign Up For Texts</span> </p>
         {/*<span><ArrowRight/></span>*/}
-       {/* <div className=" space-x-4 ">
+      
           
-          <p>USD</p>
-        </div>*/}
+          <p className="absolute inset-0 ml-322 font-light font-maison-neue pt-1">USD</p>
+    
        {/* <p className="text-white flex-right  flex flex-col items-center justify-end  ">USD</p>*/}
       </div>
       

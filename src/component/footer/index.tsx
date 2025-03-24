@@ -100,7 +100,7 @@ const Footer= () => {
             
 
         
-         <div className='pt-15 flex  font-maison-neue  mt-15  '>
+         <div className='pt-15 flex  font-maison-neue  mt-4 whitespace-nowrap text-gray-500 font-maison-neue font-light ml-63 '>
             <p> &copy; 2023 All Rights Reserved</p>
           </div>
          </div>

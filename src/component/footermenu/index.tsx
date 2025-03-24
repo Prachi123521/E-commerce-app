@@ -19,7 +19,7 @@ const FooterMenu = () =>{
     const pathname = usePathname();
 
     return(
-        <div className =' md: mt-8 w-1/3  gap-7 text-sm font-maison-neue  pb-12  flex space-x-4 '>
+        <div className =' md: mt-8 w-1/3  gap-11 text/200 text-sm font-maison-neue  pb-12  flex whitespace-nowrap font-light text-gray-500 ml-15 '>
           <h1>{item?.map((item)=>(
             <Link key = {item?.title} href={item?.href} className ={`mr-4 hover:text-stone-400 hoverEffect relative group
                 ${pathname === item?.href && "text-stone-400"}`}>{item?.title}
