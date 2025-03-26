@@ -1,11 +1,12 @@
 import React from 'react';
 
-interface Props {
 
-}
-const Carousel = () => {
+const Carousel = ({children}) => {
   return (
-    <div>
+    <div className='carousel'>
+      <div>
+        {children}
+      </div>
       
     </div>
   )

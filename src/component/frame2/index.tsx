@@ -5,8 +5,9 @@ import { Image1 } from '@/assets';
 import { Image2 } from '@/assets';
 import { Image3 } from '@/assets';
 import { picture1 } from "@/assets";
+import Carousel from '../carousel';
 //import Slider1 from '../slider1';
-import Slider from '../slider';
+
 
 
 const Collections = () => {
@@ -27,18 +28,18 @@ const Collections = () => {
 <img src ={Image1.src} alt=""/>
 <p className="absolute  flex item-center justify-center text-white text-3xl pl-16 display/400 mb-14 font-maison-neue">New Arrivals</p>
 <button className='absolute flex item-center justify-center font-maison-neue font-light 
- bg-white ml-15 py-2 px-8 mt-12 text-display/200 width={240} height={41} text-sm'  value = {list} onChange={handleChange}>SHOP THE LATEST</button>
+ bg-white ml-15 py-2 px-6 mt-12 text-display/200 width={240} height={41}  text-xs text-[11px] font-normal tracking-[2]'  value = {list} onChange={handleChange}>SHOP THE LATEST</button>
 
 
 <img src ={Image2.src} alt=""/>
 <p className='absolute flex whitespace-nowrap text-white text-3xl inset-0 ml-94 display/400 mt-48'>Best-Sellers</p>
-<button className='absolute flex bg-white text-display/200 text-sm ml-85 whitespace-nowrap
-mt-13 py-2 px-6 font-maison-neue font-light item-center '>SHOP YOUR FAVOURITES</button>
+<button className='absolute flex bg-white text-display/200 text-xs ml-85 whitespace-nowrap
+mt-13 py-2 px-4 font-maison-neue font-normal item-center tracking-[2] '>SHOP YOUR FAVOURITES</button>
 
 
 <img src ={Image3.src} alt="The Holiday Outfit"/>
 <p className='absolute flex ml-157  whitespace-nowrap text-white text-3xl dispaly/400 mb-12'>The Holiday Outfit</p>
-<button className='flex  whitespace-nowrap absolute ml-170 text-center  text-sm font-light mt-12 bg-white py-2 px-6'>SHOP OCCASSION</button>
+<button className='flex  whitespace-nowrap absolute ml-170 text-center  text-xs tracking-[2] font-normal mt-12 bg-white py-2 px-6'>SHOP OCCASSION</button>
 
 
 </div>
@@ -57,10 +58,10 @@ mt-13 py-2 px-6 font-maison-neue font-light item-center '>SHOP YOUR FAVOURITES</
 </div>
 
 
-  <Slider/>
+  
 
   {/*<Slider1/>*/}
-
+<Carousel/>
 </>
 
   )

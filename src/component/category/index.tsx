@@ -9,7 +9,7 @@ import { image5 } from '@/assets';
 const Image = () => {
   return (
     <div>
-      <p className="pt-10 text-center font-maison-neue">Shop by Category</p>
+      <p className="pt-18 text-center font-maison-neue text-xl ">Shop by Category</p>
 
 <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 <div className="group relative">
@@ -26,7 +26,7 @@ const Image = () => {
  </div>
 </div>
 
-   <div className = ' mt-4 flex  items-center justify-center gap-46 underline ml-10 text-sm '>
+   <div className = ' mt-4 flex  items-center justify-center gap-46 underline ml-10 text-xs font-solid  tracking-[2] '>
    <p>SHIRTS</p>
     <p>DENIM</p>
     <p >TEES</p>

@@ -23,12 +23,12 @@ return(
 <>
 
      <header className="  border-b  border-bg-gray-500 mb-1 hidden sm:block">
-      <div className="bg-stone-900 text-white text-sm  text-center py-1  ">
+      <div className="bg-stone-900 text-white text-sm  text-size-12 text-center py-1  ">
         <p> Get early access on launches and offers. <span className="underline">Sign Up For Texts</span> </p>
         {/*<span><ArrowRight/></span>*/}
       
           
-          <p className="absolute inset-0 ml-322 font-light font-maison-neue pt-1">USD</p>
+          <p className="absolute inset-0 ml-322 font-light font-maison-neue pt-1 text-white">USD</p>
     
        {/* <p className="text-white flex-right  flex flex-col items-center justify-end  ">USD</p>*/}
       </div>
