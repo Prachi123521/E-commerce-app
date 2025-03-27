@@ -5,8 +5,7 @@ import { Image1 } from '@/assets';
 import { Image2 } from '@/assets';
 import { Image3 } from '@/assets';
 import { picture1 } from "@/assets";
-import Carousel from '../carousel';
-//import Slider1 from '../slider1';
+import Collections1 from '../collections1';
 
 
 
@@ -45,7 +44,7 @@ mt-13 py-2 px-4 font-maison-neue font-normal item-center tracking-[2] '>SHOP YOU
 </div>
 </div>
 </div>
-<div className='pt-10 pr-42 pl-42 '>
+<div className ='pt-10 pr-42 pl-42 '>
 <img src ={picture1.src} alt=""/>
 <p className=' absolute inset-0 flex mt-470 text-white text-2xl font-maison-neue items-center justify-center'>We're on a Mission To Clean Up the Industry</p>
 <span className='absolute inset-0 flex mt-478 font-light text-{24} text-white  font-maison-neue items-center justify-center text-sm'>Read about our progress in our latest Impact Report. </span>
@@ -60,8 +59,7 @@ mt-13 py-2 px-4 font-maison-neue font-normal item-center tracking-[2] '>SHOP YOU
 
   
 
-  {/*<Slider1/>*/}
-<Carousel/>
+<Collections1/>
 </>
 
   )

@@ -1,4 +1,4 @@
-{/*import React from 'react';
+import React from 'react';
 import {image6} from "@/assets";
 import { ChevronLeft } from 'lucide-react';
 import {image7} from "@/assets";
@@ -19,26 +19,31 @@ import {frame2} from "@/assets";
 import {frame3} from "@/assets";
 import Slider2 from '../slider2';
 import Products from '../products';
-import Data from '../data';
+//import Shopping from '../shopping';
+import { useState } from 'react';
+import Everlane from '../everlane';
+import Next from '../next';
 
 
 
 
 
-const Collections = () => {
+const Collections1 = () => {
+
+  
 
    return (
       //<div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'></div>
       <>
         
       
-      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 mb-15 width={1316} height={225}">
+      {/*<div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 mb-15 width={1316} height={225}">
       <div className="group relative">
       <div className="mt-4 flex justify-between gap-6 ">
         <div className='mt-52 pl-7'>
         <ChevronLeft/>
         </div>
-        
+    
         <img src = {image6.src} alt="" />
         <p className='absolute inset-0 mt-110 text-sm font-maison-neue ml-18  '>The Waffle Long Sleev Crew  <span className='ml-21'>$60</span></p>
         <p className='absolute inset-0 mt-110 text-sm font-maison-neue ml-19 pt-6 text-gray-500 text-sm'>Bone</p>
@@ -64,23 +69,24 @@ const Collections = () => {
         <p className='absolute flex text-sm font-maison-neue whitespace-nowrap ml-325 mt-105'>The Heavyweight</p>
         <p className='absolute inset-0 text-sm text-gray-500 whitespace-nowrap font-maison-neue ml-325 mt-114'>Heathered Brown</p>
   
+    
         <div className="mt-52">
         <ChevronRight/>
         </div>
         </div>
       </div>
       </div>
-
-    
+    */}
   
-    {/*<div className='pt-3'> 
+   {/* <div className='pt-3'> 
       <Products/>
       </div>*/}
       <Slider2/>
-      {/*<Data/>*/}
+      
     
     
-     {/* <div className='  ml-20  mt-112 absolute'>
+    
+      {/*<div className='  ml-20  mt-112 absolute'>
       <ChevronLeft/>
       </div>
       <div>
@@ -98,11 +104,12 @@ const Collections = () => {
       </span>
      </div>
       </div>
-      <div className='absolute inset-0 mt-945 ml-350'>
+      <div className='absolute inset-0 mt-825 ml-350'>
       <ChevronRight/>
         </div>
-      <hr className='mt-28 bg-stone-950 '></hr>
-      */}
+      <hr className='mt-28 bg-stone-950 '></hr>*/}
+      <Next/>
+      
 
   
   
@@ -112,8 +119,8 @@ const Collections = () => {
 
   
 
-      {/* <p className='absolute inset-0 mt-1805 text-lg font-maison-neue mr-140   text-center'>Our Holiday Gift Picks </p>
-       <p className='absolute inset-0 mt-1805 ml-230 text-lg font-maison-neue '>Cleaner Fashion</p>
+      <p className='absolute inset-0 mt-1000 text-lg font-maison-neue mr-140   text-center'>Our Holiday Gift Picks </p>
+       <p className='absolute inset-0 mt-1000 ml-230 text-lg font-maison-neue '>Cleaner Fashion</p>
       
 
         <div className='width={505} height={626} pt-55  pl-55 mb-12 flex space-x-4'>
@@ -123,14 +130,14 @@ const Collections = () => {
        <p className='absolute ml-142 whitspace-nowrap mt-158 font-normal tracking-[1] font-maison-neue text-xs text-[14px]  '>See the sustainability efforts behind each of our products.</p>
        <p className='absolute ml-184 mt-168 underline text-sm font-maison-neue '>Learn More</p>
        </div>
-       <p className='ml-39 absolute inset-0 mt-1267 whitespace-nowrap tracking-[1] font-normal  text-[14px] text-sm ml-80 '>The best presents for everyone on your list.</p>
+       <p className='ml-39 absolute inset-0 mt-1172 whitespace-nowrap tracking-[1] font-normal  text-[14px] text-sm ml-80 '>The best presents for everyone on your list.</p>
        <p  className='ml-105 font-maison-neue text-sm underline'> Read More</p>
 
        <hr className='mt-25'></hr>
                                                                                 
       
 
-       <p className='text-center text-3xl font-maison-neue mt-36'>Everlane On You</p>
+       {/*<p className='text-center text-3xl font-maison-neue mt-36'>Everlane On You</p>
        <p className='text-center font-normal text-sm  tracking-[2] mt-8'>Share your latest look with # EverlaneOnYou for a chance to be featured.</p>
        <p className='underline text-sm text-center font-normal tracking-[2]  '>Add Your Photo</p>
 
@@ -148,10 +155,13 @@ const Collections = () => {
         <div className='mt-25'>
           <ChevronRight/>
         </div>
+      
 
         </div>
         </div>
-        </div>  
+        </div>  */}
+
+        <Everlane/>
 
         <div className='flex space-x-4 pl-28 mb-32 mt-25 ml-10'>
          <img src = {frame1.src} alt=""/> 
@@ -170,4 +180,4 @@ const Collections = () => {
   )
 }
 
-export default Collections;*/}
+export default Collections1;

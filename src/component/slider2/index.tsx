@@ -1,4 +1,4 @@
-{/*import React from 'react';
+import React, { useState } from 'react';
 
 import {image6} from "@/assets";
 import {image7} from "@/assets";
@@ -10,6 +10,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 //import { Arrow } from '@radix-ui/react-popover';
+//import {handleP} from "./path-to-handleP";
 
 
 const data =[
@@ -50,10 +51,11 @@ const data =[
     title1:"The Heavyweight",
     title2:"Heathered Brown"
 }]
-
+ 
 
 
 const Slider2 = () => {
+   
   
     const settings ={
         dots:true,
@@ -61,43 +63,62 @@ const Slider2 = () => {
         speed:500,
         slidesToShow:1,
         slidesToScroll:1,
+        centerMode:true,
+        arrows:false
     }
+
+    const sliderRef = React.useRef<Slider>(null);
+    const handleNext  = () => {
+        if (sliderRef.current) {
+          sliderRef.current.slickNext();
+        }
+      };
+
+      const handlePrev = () => {
+        if (sliderRef.current) {
+          sliderRef.current.slickPrev();
+        }
+        console.log("hello");
+      };
 
    
   return (
-    
-    
-    
-        
-        <div className='group-relative'>
-        <div className="mt-20 flex gap-5 ml-14 mx-auto w-3/4 auto">
-            <div>
-        <button><ChevronLeft/></button>
+    <>
+    <div className='mt-65 ml-13'>
+        <button onClick={handleNext}><ChevronLeft/></button>
         </div>
-          <Slider {...settings}>
+    
+        <div className='group-relative'>
+        <div className="flex flex-col ml-34 ">
+            
+    <Slider  ref={sliderRef} {...settings}>
         {...data.map((data)=>(
         
         <div className=''>
         
 
-  <img src = {data.src} alt=""  />
+  <img src = {data.src} alt="" className='' />
      <p className='text-xs font-maison-neue whitespace-nowrap'>{data.title1}<span className='ml-25 '>{data.price}</span></p>
+     
+     
           <p className='text-xs text-gray-500 font-maison-neue'>{data.title2}</p>
-         
        
           
   </div>
  
-
     ))}
+
    </Slider>
    </div>
    </div>
+   <div className='absolute inset-0 ml-348 mt-640'>
+    <button onClick={handlePrev}><ChevronRight/></button>
+   </div>
  
-    
+</>
     
 
   );
 }
 
-export default Slider2;*/}
+export default Slider2;

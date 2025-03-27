@@ -6,7 +6,7 @@ import {image8} from "@/assets";
 import {image9} from "@/assets";
 import {image10} from "@/assets";
 import {useState} from "react";
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 
 
@@ -18,20 +18,35 @@ const Products = () => {
         slidesToShow:1,
         slidesToScroll:1,
         centerMode:true,
-        arrows:true
+        arrows:false
         };
+
+        const sliderRef = React.useRef<Slider>(null);
+        const handleNext  = () => {
+            if (sliderRef.current) {
+              sliderRef.current.slickNext();
+            }
+          };
+
+          const handlePrev = () => {
+            if (sliderRef.current) {
+              sliderRef.current.slickPrev();
+            }
+            console.log("hello");
+          };
+        
     
   return (
     <>
-    <button className='mt-12'><ChevronLeft/></button>
+    <button className='absolute inset-0 ml-6 mt-638' onClick={handleNext}> <ChevronLeft/></button>
    
     <div>
-
-        <Slider {...settings}>
+    
+        <Slider  ref={sliderRef} {...settings}>
         
         
             <div>
-                <h2> <img src={image6.src} alt=""  className='ml-14'/></h2>
+                <h2> <img src={image6.src} alt=""  className='ml-14 mt-23'/></h2>
                 <p className='text-xs font-maison-neue ml-14'>The Waffle Long Sleev Crew  <span className='ml-27'>$60</span></p>
         <p className='text-gray-500 text-sm ml-14'>Bone</p>
             </div>
@@ -58,9 +73,10 @@ const Products = () => {
                 <p className='text-xs font-maison-neue'>The Heavyweight</p>
                 <p className='text-sm text-gray-500'>Heathered Brown</p>
              </div>
-
+            
 
         </Slider>
+        <button className='absolute inset-0 ml-358 mt-638 ' onClick={handlePrev}><ChevronRight/></button>
       
     </div>
     </>
