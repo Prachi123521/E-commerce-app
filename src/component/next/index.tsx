@@ -4,6 +4,7 @@ import { ChevronLeft } from 'lucide-react';
 import { ChevronRight } from 'lucide-react';
 import Slider from 'react-slick';
 
+
 const Next = () => {
 
     const settings = {
@@ -44,6 +45,8 @@ const Next = () => {
         </p>*/}
       
         <Slider ref={sliderRef} {...settings}>
+        
+        
       <div className="height={695} width={530}  flex  flex-col ">
       <p className='whitespace-nowrap text-right absolute ml-45 mt-60'>People Are Talking </p>
       <p className=' text-xl text-bottom mt-76 font-maison-neue ml-45'>"Love this shirt! Fits perfectly and <br></br>
@@ -63,7 +66,7 @@ const Next = () => {
      </div>
      </Slider>
       
-      <div className='absolute inset-0 mt-815 ml-350'>
+      <div className='absolute inset-0 mt-854 ml-350'>
       <button onClick={handleNext}><ChevronRight/></button>
         </div>
       <hr className='mt-28 bg-stone-950 '></hr>

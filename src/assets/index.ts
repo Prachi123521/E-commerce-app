@@ -79,3 +79,20 @@ export {frame2};
 import frame3 from "./Frame 3.png";
 export {frame3};
 
+import frame from "./Frame 1 (3).png";
+export {frame};
+
+import pic from "./Frame 3 (1).png";
+export{pic};
+
+import image14 from  "./image (14).png";
+export{image14};
+
+import image15 from "./image (15).png";
+export {image15};
+
+import image16 from "./image (16).png";
+export{image16};
+
+import image17 from "./image (17).png";
+export{image17};

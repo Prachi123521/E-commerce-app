@@ -119,8 +119,8 @@ const Collections1 = () => {
 
   
 
-      <p className='absolute inset-0 mt-1000 text-lg font-maison-neue mr-140   text-center'>Our Holiday Gift Picks </p>
-       <p className='absolute inset-0 mt-1000 ml-230 text-lg font-maison-neue '>Cleaner Fashion</p>
+      <p className='absolute inset-0 mt-1045 text-lg font-maison-neue mr-140   text-center'>Our Holiday Gift Picks </p>
+       <p className='absolute inset-0 mt-1045 ml-230 text-lg font-maison-neue '>Cleaner Fashion</p>
       
 
         <div className='width={505} height={626} pt-55  pl-55 mb-12 flex space-x-4'>
@@ -130,7 +130,7 @@ const Collections1 = () => {
        <p className='absolute ml-142 whitspace-nowrap mt-158 font-normal tracking-[1] font-maison-neue text-xs text-[14px]  '>See the sustainability efforts behind each of our products.</p>
        <p className='absolute ml-184 mt-168 underline text-sm font-maison-neue '>Learn More</p>
        </div>
-       <p className='ml-39 absolute inset-0 mt-1172 whitespace-nowrap tracking-[1] font-normal  text-[14px] text-sm ml-80 '>The best presents for everyone on your list.</p>
+       <p className='ml-39 absolute inset-0 mt-1217 whitespace-nowrap tracking-[1] font-normal  text-[14px] text-sm ml-80 '>The best presents for everyone on your list.</p>
        <p  className='ml-105 font-maison-neue text-sm underline'> Read More</p>
 
        <hr className='mt-25'></hr>
