@@ -4,6 +4,8 @@ import { ChevronLeft } from 'lucide-react';
 import { ChevronRight } from 'lucide-react';
 import Slider from 'react-slick';
 
+ 
+
 
 const Next = () => {
 
@@ -53,6 +55,7 @@ const Next = () => {
          the fabric is thick without<br></br>
          being stuff."
         </p>
+        <p className="ml-45 mt-8 text-sm  tracking-[2]">-- JonSnSF , <span className="underline">The HeavyWeight OverShirt</span></p>
       </div>
       <div>
        <img src ={image11.src} alt="" className='float-right mr-23 mt-25 mb-12'/>

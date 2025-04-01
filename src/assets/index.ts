@@ -96,3 +96,57 @@ export{image16};
 
 import image17 from "./image (17).png";
 export{image17};
+
+import section1 from "./Section 01 (4).png";
+export{section1};
+
+import image18 from "./image (18).png";
+export{image18};
+
+import image19 from "./image (19).png";
+export {image19};
+
+import image20 from "./image (20).png";
+export{image20};
+
+import image21 from "./image (21).png";
+export{image21};
+
+import pic2 from "./Screenshot 2023-11-30 at 6.28 1.png";
+export{pic2};
+
+import image22 from "./image (22).png";
+export{image22};
+
+import image23 from "./image (23).png";
+export {image23};
+
+import image24 from "./image (24).png";
+export{image24};
+
+import image25 from "./image (25).png";
+export{image25};
+
+import image26 from "./image (26).png";
+export{image26};
+
+import image27 from "./image (27).png";
+export{image27};
+
+import image28 from "./image (28).png";
+export{image28};
+
+import image29 from "./image (29).png";
+export{image29};
+
+import image30 from "./image (30).png";
+export{image30};
+
+import image31 from "./image (31).png";
+export{image31};
+
+import image32 from "./image (32).png";
+export{image32};
+
+import image33 from "./image (33).png";
+export{image33};

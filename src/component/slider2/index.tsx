@@ -88,13 +88,14 @@ const Slider2 = () => {
         <button onClick={handleNext}><ChevronLeft/></button>
         </div>
     
-        <div className='group-relative'>
-        <div className="flex flex-col ml-34 ">
-            
+        <div className='relative'>
+        <div className= " flex flex-col ml-45  ">
+        
     <Slider  ref={sliderRef} {...settings}>
+      
         {...data.map((data)=>(
         
-        <div className=''>
+        <div>
         
 
   <img src = {data.src} alt="" className='' />
@@ -107,8 +108,10 @@ const Slider2 = () => {
   </div>
  
     ))}
+    
 
    </Slider>
+   
    </div>
    </div>
    <div className='absolute inset-0 ml-348 mt-640'>

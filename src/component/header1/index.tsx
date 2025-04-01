@@ -10,7 +10,7 @@ import SearchBar from "../searchbar";
 import CartIcon from "../carticon";
 import User from "../user";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import {ArrowRight} from "lucide-react"
 
 
 
@@ -22,8 +22,9 @@ return(
 
      <header className="  border-b  border-bg-gray-500 mb-1 hidden sm:block">
       <div className="bg-stone-900 text-white text-sm  text-size-12 text-center py-1  ">
-        <p> Get early access on launches and offers. <span className="underline">Sign Up For Texts</span> </p>
-        {/*<span><ArrowRight/></span>*/}
+        <p> Get early access on launches and offers. <span className="underline">Sign Up For Texts </span> 
+        <span className="absolute"><ArrowRight className = "w-4 h-6 font-light ml-2"/></span> </p>
+        {/*<span className = ""><ArrowRight/></span>*/}
       
           
           <p className="absolute inset-0 ml-322 font-light font-maison-neue pt-1 text-white">USD</p>
