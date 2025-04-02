@@ -8,6 +8,7 @@ import {pic2}  from '@/assets';
 import {image22} from '@/assets';
 import {image23} from '@/assets';
 import {image24} from '@/assets';
+import Footer from '@/component/footer';
 
 const data=[
     {src:image22.src,
@@ -26,7 +27,7 @@ const About = () => {
     <div>
       <div>
          <img src ={section1.src} alt="" className='ml-14'/>
-         <p className='text-center font-base mt-14 tracking-[0.2] justify-between text-2xl'>At Everlane, we want the right choice to be as easy <br></br>as putting on a great T-shirt.
+         <p className='text-center font-normal mt-14 tracking-[0.2] justify-between text-2xl'>At Everlane, we want the right choice to be as easy <br></br>as putting on a great T-shirt.
              That's why we partner<br></br> with the best, ethical factories around the world.<br></br> Source only the finest materials.
              And share those <br></br>stories with you-down to the true cost of every<br></br> product we make.It's a new way of doing things.<br></br>
              We call it Radical Transparency.</p>
@@ -74,11 +75,15 @@ const About = () => {
         {data.map((data)=>(
             <div key = {data.title}>
             <img src ={data.src} alt=""/>
-            <p className='mt-4 tracking-[0.2] text-sm hover:underline'>{data.title}</p>
+            <p className='mt-4 tracking-[0.2] text-sm font-base hover:underline'>{data.title}</p>
             </div>
         ))}
     </div>
+    <div className='mt-12'>
+    <Footer/>
     </div>
+    </div>
+    
     
   )
 }

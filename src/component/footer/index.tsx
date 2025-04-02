@@ -86,13 +86,25 @@ const Footer= () => {
                     <a href="#" className="hover:underline">Out Stores</a>
                 </li>
                   </ul>
-        </div>
-        <div className='font-light mt-8 flex items-center justify-end'>
-          <div className='bg-stone-100 py-3 px-12  px-5 border-4 p-4  mb-2 bg-white-50 outline-offset float-top  '>
+                      
+                      
+
+                  </div>
+                    {/*<div>
+                  <h2 className='bg-stone-100 px-8 py-1 mt-6  '>
+                    <input type = 'email' placeholder='' className='py-2 px-4 w-full '/>
+                  <div className=' absolute inset-0 mt-1510 ml-347 bg-stone-900 '>
+                    <button className='bg-black  absolute inset-0 mt-1510 ml-347 bg-stone-900'><ArrowRight/></button> 
+                 </div>
+                    </h2> 
+                    </div>*/}
+
+        <div className='font-light  flex items-center justify-end'>
+          <h2 className='bg-stone-100 py-3 px-12  px-5 border-4 p-4  mb-34 bg-white-50 outline-offset float-top  '>
             <input type = 'email' placeholder='Email Address'/>
-            </div>
-            <div className='bg-stone-900 py-2 px-3 border-4 p-4  mr-2 '>
-            <button className='text-white'><ArrowRight/></button>
+            </h2>
+            <div className=' '>
+            <button className='text-white mb-34 bg-stone-900 py-3 px-3 ml-0'><ArrowRight/></button>
           </div>
           </div>
     

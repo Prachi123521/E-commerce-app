@@ -9,6 +9,7 @@ import {image30} from "@/assets";
 import {image31} from "@/assets";
 import {image32} from "@/assets";
 import {image33} from "@/assets";
+import Footer from '@/component/footer';
 
 
 
@@ -59,8 +60,8 @@ const Stores = () => {
          title1:"King of Prussia",  
         },
         {src:image33.src,
-            title:"KING OF PRUSSIA",
-            title1:"King of Prussia",  
+            title:"GEORGETOWN",
+            title1:"Georgetown",  
            },
     ]
     
@@ -100,12 +101,15 @@ const Stores = () => {
               {data2.map((data2)=>(
                 <div key={data2.title}>
                 <img src ={data2.src} alt =""/>
-                <p>{data2.title}</p>
-                <p>{data2.title1}</p>
+                <p className='whitespace-nowrap text-xs hover:underline tracking-[1] font-maison-neue '>{data2.title}</p>
+                <p className='whitespace-nowrap text-normal mt-2 tracking-[1] hover:underline'>{data2.title1}</p>
                 </div>
               ))}
             </div>
         </div>
+        <div className='mt-12'>
+         <Footer/>
+         </div>
     </div>
   )
 }
