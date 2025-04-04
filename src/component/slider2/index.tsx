@@ -1,127 +1,98 @@
-import React, { useState } from 'react';
+import React from "react";
+import { image6, image7, image8, image9, image10 } from "@/assets";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import {image6} from "@/assets";
-import {image7} from "@/assets";
-import {image8} from "@/assets";
-import {image9} from "@/assets";
-import {image10} from "@/assets";
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-//import { Arrow } from '@radix-ui/react-popover';
-//import {handleP} from "./path-to-handleP";
-
-
-const data =[
-    {
-   id : 1,
-   src :image6.src,
-   title1: "The Waffle Long Sleev Crew",
-   price:"$60",
-   title2: "Bone"
-
-},
-{
-    id:2,
-    src : image7.src,
-    title1:"The Bomber Jacket | Uniform",
-    price:"$148",
-    title2:"Toasted Coconut"
-},
-{
-    id:3,
-    src:image8.src,
-    title1:"The Slim 4-Way Stretch Organic Jean | ",
+const data = [
+  {
+    src: image6.src,
+    title1: "The Waffle Long Sleev Crew",
+    price: "$60",
+    title2: "Bone",
+  },
+  {
+    src: image7.src,
+    title1: "The Bomber Jacket | Uniform",
+    price: "$148",
+    title2: "Toasted Coconut",
+  },
+  {
+    src: image8.src,
+    title1: "The Slim 4-Way Stretch Organic Jean | ",
     //price:"$98",
-    title2:"Dark Indigo"
-
-
-},
-{
-    id:4,
-    src:image9.src,
-    title1:"The Essential Organic Crew",
-    price:"$30",
-    title2:"Vintage Black"
-},
-{
-    id:5,
-    src:image10.src,
-    title1:"The Heavyweight",
-    title2:"Heathered Brown"
-}]
- 
-
+    title2: "Dark Indigo",
+  },
+  {
+    src: image9.src,
+    title1: "The Essential Organic Crew",
+    price: "$30",
+    title2: "Vintage Black",
+  },
+  {
+    src: image10.src,
+    title1: "The Heavyweight",
+    title2: "Heathered Brown",
+  },
+];
 
 const Slider2 = () => {
-   
-  
-    const settings ={
-        dots:true,
-        infinte:true,
-        speed:500,
-        slidesToShow:1,
-        slidesToScroll:1,
-        centerMode:true,
-        arrows:false
+  const settings = {
+    dots: true,
+    infinte: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    centerMode: false,
+    arrows: false,
+  };
+
+  const sliderRef = React.useRef<Slider>(null);
+  const handleNext = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
     }
+  };
 
-    const sliderRef = React.useRef<Slider>(null);
-    const handleNext  = () => {
-        if (sliderRef.current) {
-          sliderRef.current.slickNext();
-        }
-      };
+  const handlePrev = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+    console.log("hello");
+  };
 
-      const handlePrev = () => {
-        if (sliderRef.current) {
-          sliderRef.current.slickPrev();
-        }
-        console.log("hello");
-      };
-
-   
   return (
     <>
-    <div className='mt-65 ml-13'>
-        <button onClick={handleNext}><ChevronLeft/></button>
-        </div>
-    
-        <div className='relative'>
-        <div className= " flex flex-col ml-45  ">
-        
-    <Slider  ref={sliderRef} {...settings}>
-      
-        {...data.map((data)=>(
-        
-        <div>
-        
+      <div className="absolute inset-0 ml-5 mt-640 ">
+        <button onClick={handleNext}>
+          <ChevronLeft />
+        </button>
+      </div>
 
-  <img src = {data.src} alt="" className='' />
-     <p className='text-xs font-maison-neue whitespace-nowrap'>{data.title1}<span className='ml-25 '>{data.price}</span></p>
-     
-     
-          <p className='text-xs text-gray-500 font-maison-neue'>{data.title2}</p>
-       
-          
-  </div>
- 
-    ))}
-    
+      <Slider ref={sliderRef} {...settings}>
+        {data.map((data) => (
+          <div key={data.title1}>
+            <img src={data.src} alt="" className="mt-8 ml-20" />
+            <p className="text-xs tracking-[0.2] font-maison-neue whitespace-nowrap ml-20 ">
+              {data.title1}
+              <span className="ml-24 ">{data.price}</span>
+            </p>
 
-   </Slider>
-   
-   </div>
-   </div>
-   <div className='absolute inset-0 ml-348 mt-640'>
-    <button onClick={handlePrev}><ChevronRight/></button>
-   </div>
- 
-</>
-    
+            <p className="text-xs text-gray-500 font-maison-neue ml-20 mb-12">
+              {data.title2}
+            </p>
+          </div>
+        ))}
+      </Slider>
 
+      <div className="absolute inset-0 ml-368 mt-640">
+        <button onClick={handlePrev}>
+          <ChevronRight />
+        </button>
+      </div>
+    </>
   );
-}
+};
 
 export default Slider2;

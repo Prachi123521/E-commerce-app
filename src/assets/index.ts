@@ -150,3 +150,15 @@ export{image32};
 
 import image33 from "./image (33).png";
 export{image33};
+
+import Rectangle from "./Rectangle 3.png";
+export{Rectangle};
+
+import image34 from "./image (34).png";
+export{image34};
+
+import image35 from "./image (35).png";
+export{image35};
+
+import image36 from "./image (36).png";
+export{image36};

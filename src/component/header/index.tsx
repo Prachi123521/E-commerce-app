@@ -1,18 +1,12 @@
-import { homeimage } from "@/assets";
+{/*import { homeimage } from "@/assets";
 
 
 
 
 import React from "react";
-import HeaderMenu from "../headermenu";
-import Logo from "../logo";
-import Container from "../container";
-import SearchBar from "../searchbar";
-import CartIcon from "../carticon";
-import User from "../user";
-import Link from "next/link";
+
 import Image from "../category";
-import { ArrowRight } from "lucide-react";
+
 import Collections from "../frame2";
 
 
@@ -35,7 +29,7 @@ return(
             <ul className="text-red-700">Sale </ul>
           </div>*/}
         
-  <div className="pl-15">
+ {/* <div className="pl-15">
  <img src={homeimage.src} alt="" />
  </div>
  <Image/>
@@ -52,4 +46,4 @@ return(
     
 }
 
-export default Header;
+export default Header;*/}
