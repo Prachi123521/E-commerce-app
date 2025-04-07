@@ -4,7 +4,7 @@ import { image, image1, image2, image3, image4, image5 } from "@/assets";
 const Category = () => {
   return (
     <div>
-      <p className="pt-18 text-center font-maison-neue text-xl ">
+      <p className="pt-18 text-center font-maison-neue text-xl font-normal leading-[33.24px] text-[24px] text-[100] ">
         Shop by Category
       </p>
 
@@ -22,7 +22,7 @@ const Category = () => {
         </div>
       </div>
 
-      <div className=" mt-4 flex  items-center justify-center gap-46 underline ml-10 text-xs font-solid  tracking-[2] ">
+      <div className=" mt-4 flex  text-center justify-center space-x-43 underline ml-10  font-solid  tracking-[1.4px] leading-[20px] text-[14px] font-normal text-[300] ">
         <p>SHIRTS</p>
         <p>DENIM</p>
         <p>TEES</p>

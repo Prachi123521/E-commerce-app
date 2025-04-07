@@ -8,7 +8,7 @@ const HeaderMenu = () => {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <div className=" md: mt-8 w-1/3  gap-7 text-sm font-maison-neue capitalize pb-5  ">
+    <div className=" md: mt-8 w-1/3  gap-7 text-sm font-maison-neue capitalize pb-5 tracking-[0.2] leading-[16px] text-[12px] font-normal text-[200]  ">
       <h1>
         {headerData?.map((item) => (
           <Link

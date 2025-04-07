@@ -19,7 +19,8 @@ const Everlane = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
-    centerMode:false,
+    vaiableWidth:false,
+
   
   };
 
@@ -39,37 +40,39 @@ const Everlane = () => {
   return (
     <>
       <div>
-        <p className="text-center text-3xl font-maison-neue mt-24">
+        <p className="text-center  font-maison-neue mt-24 leading-[40px] font-normal text-[26px]   hover:underline">
           Everlane On You
         </p>
-        <p className="text-center font-normal text-sm  tracking-[2] mt-4">
+        <p className="text-center font-normal text-xs font-light hover:underline  tracking-[1.4px] leading-[16.8px] font-maison-neue text-[14px] mt-4">
           Share your latest look with # EverlaneOnYou for a chance to be
           featured.
         </p>
-        <p className="underline text-sm text-center font-normal tracking-[2]  ">
+        <p className="underline text-sm text-center hover:underline font-normal tracking-[2]  ">
           Add Your Photo
         </p>
       </div>
       
 
-      <div className=" absolute inset-0 ml-9 mt-1280 ">
+      <div className=" absolute inset-0 ml-15 mt-1236">
         <button onClick={handleNext}>
           {" "}
           <ChevronLeft />{" "}
         </button>
       </div>
-
+         
+         <div className="px-32">
       <Slider ref={sliderRef} {...settings}>
         
         {data.map((data) => (
           <div key={data.src} className="" >
-            <img src={data.src} alt="" className="ml-17 mt-2 items-center" />
+            <img src={data.src} alt="" className=" mt-2 items-center" />
           </div>
         ))}
         
+        
       </Slider>
-
-      <div className="absolute inset-0 ml-355 mt-1280 ">
+ </div>
+      <div className="absolute inset-0 ml-355 mt-1234 ">
         <button onClick={handlePrev}>
           <ChevronRight />
         </button>

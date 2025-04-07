@@ -1,4 +1,4 @@
-import React from "react";
+{/*import React from "react";
 import Slider from "react-slick";
 import { image6, image7, image8, image9, image10 } from "@/assets";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -61,9 +61,9 @@ const Products = () => {
               <img src={image8.src} alt="" />
             </h2>
             <p className="text-xs font-maison-neue">
-              The Slim 4-Way Stretch Organic Jean |{" "}
+              The Slim 4-Way Stretch Organic Jean | <br></br> Uniform
               <span className="ml-14">$98</span>
-              <br></br> Uniform
+              
             </p>
             <p className="text-gray-500 text-sm">Dark Indigo</p>
           </div>
@@ -97,4 +97,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Products;*/}

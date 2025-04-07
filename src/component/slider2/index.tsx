@@ -20,9 +20,10 @@ const data = [
   },
   {
     src: image8.src,
-    title1: "The Slim 4-Way Stretch Organic Jean | ",
-    //price:"$98",
-    title2: "Dark Indigo",
+    title1: "The Slim 4-Way Stretch Organic Jean |" ,
+    title:"Uniform",
+    price:"$98",
+    title3: "Dark Indigo",
   },
   {
     src: image9.src,
@@ -69,22 +70,29 @@ const Slider2 = () => {
           <ChevronLeft />
         </button>
       </div>
-
+         
+         <div className="px-10">
       <Slider ref={sliderRef} {...settings}>
         {data.map((data) => (
           <div key={data.title1}>
-            <img src={data.src} alt="" className="mt-8 ml-20" />
+            <img src={data.src} alt="" className="mt-8 ml-20  h-[420px]" />
             <p className="text-xs tracking-[0.2] font-maison-neue whitespace-nowrap ml-20 ">
               {data.title1}
-              <span className="ml-24 ">{data.price}</span>
+            
+              <span className="ml-20 ">{data.price}</span>
             </p>
 
-            <p className="text-xs text-gray-500 font-maison-neue ml-20 mb-12">
-              {data.title2}
+            <p className="text-xs text-gray-500 font-maison-neue ml-20 mb-12 hover:underline">
+              {data.title2} 
+              <span className="text-stone-950">{data.title}</span>
+              <br></br>
+              
+          <span className="mt-4">{data.title3}</span>
             </p>
           </div>
         ))}
       </Slider>
+      </div>
 
       <div className="absolute inset-0 ml-368 mt-640">
         <button onClick={handlePrev}>

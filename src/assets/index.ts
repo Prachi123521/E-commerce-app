@@ -162,3 +162,24 @@ export{image35};
 
 import image36 from "./image (36).png";
 export{image36};
+
+import image37 from "./image (37).png";
+export{image37};
+
+import image38 from "./image (38).png";
+export{image38};
+
+import image39 from "./image (39).png";
+export{image39};
+
+import image40 from "./image (40).png";
+export{image40};
+
+import image41 from "./image (41).png";
+export{image41};
+
+import image42 from "./image (42).png";
+export{image42};
+
+import image43 from "./image (43).png";
+export{image43};

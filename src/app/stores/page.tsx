@@ -11,7 +11,7 @@ import {
   image33,
   image27
 } from "@/assets";
-import Footer from "@/component/footer";
+
 
 const Stores = () => {
   const data = [
@@ -89,10 +89,7 @@ const Stores = () => {
           ))}
         </div>
       </div>
-      <div className="mt-12">
-        <Footer />
-      </div>
-    </div>
+       </div>
   );
 };
 

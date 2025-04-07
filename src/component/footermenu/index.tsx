@@ -23,7 +23,7 @@ const FooterMenu = () => {
   const pathname = usePathname();
 
   return (
-    <div className=" md: mt-8 w-1/3  gap-11 text/200 text-sm font-maison-neue  pb-12  flex whitespace-nowrap font-light text-gray-500 ml-15 ">
+    <div className=" md: mt-2 w-1/3  gap-23 text/200 text-sm  font-maison-neue tracking[0.2px] leading-[16px]  text-[14px]  pb-12 font-normal  flex whitespace-nowrap font-light text-gray-600 ml-12 ">
       <h1>
         {item?.map((item) => (
           <Link

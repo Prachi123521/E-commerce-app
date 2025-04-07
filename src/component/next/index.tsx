@@ -36,7 +36,7 @@ const Next = () => {
         </button>
       </div>
         
-      
+      <div className="px-18">
       <Slider ref={sliderRef} {...settings}>
         {/*<div className=" flex  items-center justify-between ">
           <div className="flex flex-col w-auto gap-4 ">
@@ -62,7 +62,7 @@ const Next = () => {
           </div>
           </div>*/}
         <div className="height={695} width={530}  flex  flex-col  ">
-          <p className="whitespace-nowrap text-right absolute ml-45 mt-83">
+          <p className="whitespace-nowrap text-right absolute ml-45 mt-83 tracking-[0.64px] leading-[24px] font-maison-neue text-[16px] font-normal hover:underline">
             People Are Talking{" "}
           </p>
           <p className=" text-xl text-bottom mt-102 font-maison-neue ml-45">
@@ -82,14 +82,14 @@ const Next = () => {
           <img src={image11.src} alt="" className="mt-25 mb-12" />
         </div>
       </Slider>
-
+</div>
 
       <div className="absolute inset-0 mt-822 ml-350">
         <button onClick={handleNext}>
           <ChevronRight />
         </button>
       </div>
-      <hr className="mt-28 ml-12 mr-12 border-black "></hr>
+      <hr className="mt-28 ml-50 mr-50  border-black "></hr>
     </>
   );
 };

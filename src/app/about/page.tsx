@@ -10,7 +10,7 @@ import {
   image23,
   image24,
 } from "@/assets";
-import Footer from "@/component/footer";
+
 
 const data = [
   { src: image22.src, title: "Our Products" },
@@ -23,7 +23,7 @@ const About = () => {
     <div>
       <div>
         <img src={section1.src} alt="" className="ml-14" />
-        <p className="text-center font-normal mt-14 tracking-[0.2] justify-between text-2xl">
+        <p className="text-center font-normal mt-14 tracking-[0.2px] justify-between leading-[53.2px] text-[38px]">
           At Everlane, we want the right choice to be as easy <br></br>as
           putting on a great T-shirt. That&apos;s why we partner<br></br> with
           the best, ethical factories around the world.<br></br> Source only the
@@ -37,7 +37,7 @@ const About = () => {
       <div className="flex ">
         <img src={image18.src} alt="" className="mt-12 w-700 " />
         <div className="bg-stone-300  w-700 mt-12">
-          <p className="mt-82 ml-20 whitespace-nowrap pr-[70px] text-xs font-bold">
+          <p className="mt-82 ml-20 whitespace-nowrap pr-[70px] text-xs font-semibold tracking-[0.2px] leading-[16px] text-[12px]">
             OUR FACTORIES
           </p>
           <p className="ml-20 whitespace-nowrap text-4xl tracking-[0.2]">
@@ -96,15 +96,13 @@ const About = () => {
         {data.map((data) => (
           <div key={data.title}>
             <img src={data.src} alt="" />
-            <p className="mt-4 tracking-[0.2] text-sm font-base hover:underline">
+            <p className="mt-4 tracking-[0.2] text-sm font-base hover:underline mb-18">
               {data.title}
             </p>
           </div>
         ))}
       </div>
-      <div className="mt-12">
-        <Footer />
-      </div>
+      
     </div>
   );
 };
