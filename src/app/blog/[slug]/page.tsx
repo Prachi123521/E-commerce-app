@@ -15,14 +15,19 @@ const data = [
 ];
 
 interface Params {
+  slug : string;
+}
+
+interface Post {
   slug :string;
+  img:string;
 }
 
 // Fetch dynamic route parameters directly from `params`
 const BlogDetail = ({ params }: { params: Promise< { slug :string }>}) => {
   const { slug } = use (params); // Get the slug from params
 
-  const [postData, setPostData] = useState<unknown>(null);
+  const [postData, setPostData] = useState<Post|null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
  
