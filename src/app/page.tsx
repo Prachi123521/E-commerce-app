@@ -13,7 +13,7 @@ const Home = () => (
     <Category/>
     <Collections/>
 
-    <Footer />
+
   </div>
 );
 export default Home;

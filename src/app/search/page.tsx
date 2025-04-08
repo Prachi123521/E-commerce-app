@@ -36,7 +36,7 @@ const Search = () => {
         {items.map((items) => (
           <div key={items.title}>
             <img src={items.src} alt="" />
-            <p className="mt-2 text-sm  tracking-[0.64px] leading-[24px] font-normal text-[16px] text-[400] font-maison-neue underline">{items.title}</p>
+            <p className="mt-2 text-sm mb-18 tracking-[0.64px] leading-[24px] font-normal text-[16px] text-[400] font-maison-neue underline">{items.title}</p>
           </div>
         ))}
       </div>

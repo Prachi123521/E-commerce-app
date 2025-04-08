@@ -183,3 +183,18 @@ export{image42};
 
 import image43 from "./image (43).png";
 export{image43};
+  
+import section01 from "./Section 01 (5).png";
+export{section01};
+
+import twitter from "./twitter.png";
+export{twitter};
+
+import facebook from "./facebook.png";
+export{facebook};
+
+import linkedin from "./linkedin.png";
+export{linkedin};
+
+import section03 from "./Section 03 (1).png";
+export{section03};

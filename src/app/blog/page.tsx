@@ -1,16 +1,10 @@
-import React, { JSX } from "react";
+import React from "react";
 import { Rectangle } from "@/assets";
 import Link from "next/link";
 import { image34, image35, image36, image37, image38, image39, image40, image41, image42, image43 } from "@/assets";
 
-interface BlogPost {
-  slug: string;
-  src: string;
-  title: string | JSX.Element;
-  title1: string;
-}
 
-const data : BlogPost[]= [
+const data = [
   {slug:"how-to-style-winter-whites", src: image34.src, title: "How To Style Winter Whites", title1: "Style" },
   {slug:"we-won-a-glossy-award", src: image35.src, title: "We Won A Glossy Award", title1: "Transparency" },
   {slug:"coordinate-your-style",
@@ -27,7 +21,7 @@ const data : BlogPost[]= [
 
 ];
 
-{/*const data1 =[
+const data1 =[
   {slug:"black-friday-fund",src: image37.src, title:"Black Friday Fund 2023", title1:"Transparency"},
   { slug:"holiday-outfits", src: image38.src, 
     title:(
@@ -45,7 +39,7 @@ const data2 =[
   {slug:"environmental-initiatives", src:image42.src, title:"Environmental Initiatives"},
   {slug:"better-factories",src:image43.src, title:"Better Factories"},
 ]
-*/}
+
 const Blog = () => {
   
   return (
@@ -68,25 +62,25 @@ const Blog = () => {
         The Latest
       </p>
       <div className="flex space-x-8 ml-26 mt-4">
-        {data.map((post) => (
+        {data.map((data) => (
           
-          <div key={post.slug}>
-            <img src={post.src} alt=""/>
+          <div key={data.src}>
+            <img src={data.src} alt=""/>
             <p className="text-[32px] leading-[40px] font-normal  font-maison-neue hover:underline mt-2">
-              {post.title}
+              {data.title}
             </p>
-            <Link href ={`blog/${post.slug}`}>
-            <a>
+            <Link href ={`blog/${data.slug}`}>
+            
             <button className="tracking-[0.2px] leading-[16px] text-[12px] font-maison-neue hover:underline font-semibold p-2 mt-2 py-1 px-6 rounded-full border-2 border-gray-200">
-              {post.title1}
+              {data.title1}
             </button>
-            </a>
+            
             </Link>
           </div>
         ))}
       </div>
 
-      {/*<div className="flex space-x-8 ml-26 mt-28">
+      <div className="flex space-x-8 ml-26 mt-28">
         {data1.map((data1)=>(
           <div key={data1.src}>
           <img src ={data1.src} alt=""/>
@@ -115,7 +109,7 @@ const Blog = () => {
      <span>
      <button className="leading-[21px] tracking[0.2px] font-semibold text-[14px] bg-white text-black px-7 py-4 rounded-sm text-xs">@Everlane Instagram</button>
      </span>
-     </p>*/}
+     </p>
 
     </div>
   );
