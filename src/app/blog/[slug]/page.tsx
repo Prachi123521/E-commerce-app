@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import React from 'react';
+import React,{use} from 'react';
 import { section01,twitter,facebook,linkedin,section03 } from '@/assets';
 
 
@@ -19,10 +19,10 @@ const data = [
 }*/}
 
 // Fetch dynamic route parameters directly from `params`
-const BlogDetail = ({ params }: { params: { slug :string }}) => {
-  const { slug } =  params; // Get the slug from params
+const BlogDetail = ({ params }: { params: Promise< { slug :string }>}) => {
+  const { slug } = use (params); // Get the slug from params
 
-  const [postData, setPostData] = useState<unknown>(null);
+  const [postData, setPostData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
  
@@ -66,8 +66,8 @@ const BlogDetail = ({ params }: { params: { slug :string }}) => {
       <Image src={section03} alt="" className='mt-20 pl-60 ml-15 w-[1216] h-[1054]'/>
       <p className='ml-45 leading-[48px] text-[40px] font-semibold font-maison-neue'>Nail the Classics</p>
       <p className='mt-8 ml-45'>Do pure winter chic with a classic cashmere white sweater. Made in the softest<br></br> cashmere, it&apos;s a sweater
-        that will last season after season. Effortlessly elevating any<br></br> winter outfit, a white sweater is a must for any capsule collection. 
-        Just make sure you <br/>keep it clean and stain free, to maintain that clean, polished look. Pair it with dark jeans or Utility Barrel pants for a 
+        that will last season after season. Effortlessly elevating any winter outfit, a white sweater is a must for any capsule collection. 
+        Just make sure keep it clean and stain free, to maintain that clean, polished look. Pair it with dark jeans or Utility Barrel pants for a 
         casual yet refined ensemble, or layer it, or layer it over a collared shirt for a  peppy touch. 
       </p>
 
