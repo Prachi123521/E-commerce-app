@@ -1,5 +1,4 @@
-//import Header1 from "@/component/header1";
-import Footer from "@/component/footer";
+
 import Hero from "@/component/hero";
 import Category from "@/component/category";
 import "slick-carousel/slick/slick.css";

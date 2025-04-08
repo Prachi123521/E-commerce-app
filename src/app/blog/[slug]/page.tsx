@@ -22,7 +22,7 @@ const data = [
 const BlogDetail = ({ params }: { params: { slug :string }}) => {
   const { slug } =  params; // Get the slug from params
 
-  const [postData, setPostData] = useState<any>(null);
+  const [postData, setPostData] = useState<unknown>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
  
