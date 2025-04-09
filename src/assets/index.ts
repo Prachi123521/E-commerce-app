@@ -198,3 +198,22 @@ export{linkedin};
 
 import section03 from "./Section 03 (1).png";
 export{section03};
+
+import image44 from "./image (44).png";
+export{image44};
+
+import image45 from "./image (45).png";
+export{image45};
+
+import image46 from "./image (46).png";
+export{image46};
+
+import image47 from "./image (47).png";
+export{image47};
+
+import image48 from "./image (48).png";
+export{image48};
+
+import image49 from "./image (49).png";
+export{image49};
+
