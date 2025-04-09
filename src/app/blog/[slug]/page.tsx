@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import Slider from "react-slick";
 import Image from "next/image";
 import React, { use } from "react";
 import {
@@ -11,9 +9,7 @@ import {
   facebook,
   linkedin,
   section03,
-  image44,
-  image45,
-  image46,image47,image48,image49
+  image44,image45,image46,image47,image48,image49
 } from "@/assets";
 
 const data1=[
@@ -168,7 +164,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
         </p>
         <p className="ml-60 mt-10 leading-[33.24px] text-[24px] font-normal hover:underline w-[944] h-[200]">
           Nothing feels more luxe than an all-white winter outfit. And the best
-          part? You don't
+          part? You don&apos;t
           <br /> have to break the bank to create a super chic top-to-toe look.
           Pair classic{" "}
           <span className="underline text-solid">
@@ -222,7 +218,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
         <span className="underline text-solid">white silk blouse </span>layered
         under a chunky knit sweater or a white wool skirt paired with a<br />
         <span className="underline text-solid">turtleneck </span>creates a
-        textural look that's both cozy and chic.
+        textural look that&apos;s both cozy and chic.
       </p>
 
       <p className="ml-63 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue ">
