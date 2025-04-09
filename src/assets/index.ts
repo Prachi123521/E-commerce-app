@@ -217,3 +217,6 @@ export{image48};
 import image49 from "./image (49).png";
 export{image49};
 
+import star from "./Frame 1 (4).png";
+export{star};
+

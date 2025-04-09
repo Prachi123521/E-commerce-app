@@ -4,7 +4,7 @@ import { image, image1, image2, image3, image4, image5 } from "@/assets";
 const Category = () => {
   return (
     <div>
-      <p className="pt-18 text-center font-maison-neue text-xl font-normal leading-[33.24px] text-[24px] text-[100] ">
+      <p className="pt-18 text-center font-maison-neue text-xl font-normal hover:underline cursor-pointer leading-[33.24px] text-[24px] text-[100] ">
         Shop by Category
       </p>
 
@@ -22,13 +22,25 @@ const Category = () => {
         </div>
       </div>
 
-      <div className=" mt-4 flex  text-center justify-center space-x-43 underline ml-10  font-solid  tracking-[1.4px] leading-[20px] text-[14px] font-normal text-[300] ">
-        <p>SHIRTS</p>
-        <p>DENIM</p>
-        <p>TEES</p>
-        <p>PANTS</p>
-        <p>SWEATERS</p>
-        <p>OUTERWEAR</p>
+      <div className=" mt-4 flex  text-center justify-center space-x-43  ml-10  font-solid cursor-pointer  tracking-[1.4px] leading-[20px] text-[14px] font-normal text-[300] ">
+        <p className="relative  border-b-2 border-black hover:border-blue-400 ">
+          SHIRTS
+        </p>
+        <p className="relative  border-b-2 border-black hover:border-blue-400 ">
+          DENIM
+        </p>
+        <p className="relative  border-b-2 border-black hover:border-blue-400 ">
+          TEES
+        </p>
+        <p className="relative  border-b-2 border-black hover:border-blue-400 ">
+          PANTS
+        </p>
+        <p className="relative  border-b-2 border-black hover:border-blue-400 ">
+          SWEATERS
+        </p>
+        <p className="relative  border-b-2 border-black hover:border-blue-400 ">
+          OUTERWEAR
+        </p>
       </div>
     </div>
   );

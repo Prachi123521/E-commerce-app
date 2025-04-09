@@ -12,8 +12,8 @@ const Header1 = () => {
   return (
     <>
       <header className="  border-b  border-bg-gray-500 mb-1 hidden sm:block">
-        <div className="bg-stone-900 text-white text-sm  text-[12px] tracking-[0.2] leading-[16px] font-semibold text-center py-1 hover:underline ">
-          <p>
+        <div className="bg-stone-900 text-white text-sm  text-[12px] tracking-[0.2] leading-[16px] font-semibold text-center py-1 hover:border-blue-400 hover:underline ">
+          <p className="cursor-pointer ">
             {" "}
             Get early access on launches and offers.{" "}
             <span className="underline font-normal text-[200] leading-[16px] tracking-[0.2px] font-normal ">
@@ -42,7 +42,7 @@ const Header1 = () => {
           </div>
         </Container>
       </header>
-      <div className="flex w-fit gap-10 mx-auto font-maison-neue text-black text-sm py-4 leading-[16px] tracking-[0.2px] text-[12px] font-normal text-[200] ">
+      <div className="flex w-fit gap-10 mx-auto font-maison-neue text-black text-sm py-4 leading-[16px] tracking-[0.2px] text-[12px] font-normal cursor-pointer text-[200] ">
         <Link href="#" className="hover:underline">
           Holiday Gifting{" "}
         </Link>
@@ -63,12 +63,12 @@ const Header1 = () => {
           Pants & Jeans
         </Link>
         <Link href="#" className="hover:underline">
-          Outwear{" "}
+          Outerwear{" "}
         </Link>
         <Link href="#" className="hover:underline">
           Shoes & Bags{" "}
         </Link>
-        <ul className="text-red-700">Sale </ul>
+        <ul className="text-red-700 hover:underline">Sale </ul>
       </div>
     </>
   );

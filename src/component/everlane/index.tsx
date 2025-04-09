@@ -13,15 +13,13 @@ const data = [
 
 const Everlane = () => {
   const settings = {
-    dots:false,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
-    vaiableWidth:false,
-
-  
+    vaiableWidth: false,
   };
 
   const sliderRef = React.useRef<Slider>(null);
@@ -40,40 +38,36 @@ const Everlane = () => {
   return (
     <>
       <div>
-        <p className="text-center  font-maison-neue mt-24 leading-[40px] font-normal text-[26px]   hover:underline">
+        <p className="text-center  font-maison-neue mt-24 leading-[40px] font-normal text-[26px]  cursor-pointer hover:underline">
           Everlane On You
         </p>
-        <p className="text-center font-normal text-xs font-light hover:underline  tracking-[1.4px] leading-[16.8px] font-maison-neue text-[14px] mt-4">
+        <p className="text-center font-normal text-xs font-light hover:underline cursor-pointer  tracking-[1.4px] leading-[16.8px] font-maison-neue text-[14px] mt-4">
           Share your latest look with # EverlaneOnYou for a chance to be
           featured.
         </p>
-        <p className="underline text-sm text-center hover:underline font-normal tracking-[2]  ">
+        <p className=" text-sm text-center cursor-pointer font-normal tracking-[1.4px] underline hover:underline  ">
           Add Your Photo
         </p>
       </div>
-      
 
       <div className=" absolute inset-0 ml-15 mt-1236">
-        <button onClick={handleNext}>
+        <button onClick={handlePrev}>
           {" "}
           <ChevronLeft />{" "}
         </button>
       </div>
-         
-         <div className="px-32">
-      <Slider ref={sliderRef} {...settings}>
-        
-        {data.map((data) => (
-          <div key={data.src} className="" >
-            <img src={data.src} alt="" className=" mt-2 items-center" />
-          </div>
-        ))}
-        
-        
-      </Slider>
- </div>
+
+      <div className="px-32">
+        <Slider ref={sliderRef} {...settings}>
+          {data.map((data) => (
+            <div key={data.src} className="">
+              <img src={data.src} alt="" className=" mt-2 items-center" />
+            </div>
+          ))}
+        </Slider>
+      </div>
       <div className="absolute inset-0 ml-355 mt-1234 ">
-        <button onClick={handlePrev}>
+        <button onClick={handleNext}>
           <ChevronRight />
         </button>
       </div>
