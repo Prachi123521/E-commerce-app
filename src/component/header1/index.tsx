@@ -293,7 +293,7 @@ const Header1 = () => {
                 className="absolute top-8 left-0 w-66 bg-white rounded-md shadow-lg z-50 py-2"
               >
                 <div className="grid grid-cols-2 gap-x-6 px-4 pt-4">
-                  {dropdownData.newArrivals.map((section, index) => (
+                  {dropdownData.newArrivals.map((section) => (
                     <div
                       key={section.title}
                       className={`p-4 rounded-md  ${
@@ -306,7 +306,7 @@ const Header1 = () => {
                         {section.title}
                       </h3>
                       <div className="flex flex-col gap-1">
-                        {section.items.map((item, idx) => (
+                        {section.items.map((item) => (
                           <Link
                             key={`${section.title}-${item}`}
                             href="#"
@@ -343,7 +343,7 @@ const Header1 = () => {
                 className="absolute top-8 left-0 w-90 bg-white rounded-md shadow-lg z-50 py-4 px-6"
               >
                 <div className="grid grid-cols-2 gap-4">
-                  {dropdownData.bestSellers.map((section, index) => (
+                  {dropdownData.bestSellers.map((section) => (
                     <div
                       key={section.title}
                       className={`p-4 rounded-md ${
@@ -356,7 +356,7 @@ const Header1 = () => {
                         {section.title}
                       </h3>
                       <div className="flex flex-col gap-1">
-                        {section.items.map((item, idx) => (
+                        {section.items.map((item) => (
                           <Link
                             key={`${section.title}-${item}`}
                             href="#"
@@ -407,7 +407,7 @@ const Header1 = () => {
                         {section.title}
                       </h3>
                       <div className="flex flex-col gap-1">
-                        {section.items.map((item, idx) => (
+                        {section.items.map((item) => (
                           <Link
                             key={`${section.title}-${item}`}
                             href="#"
@@ -445,7 +445,7 @@ const Header1 = () => {
         className="absolute top-8 left-0 w-90 bg-white rounded-md shadow-lg z-50 py-4 px-6"
       >
         <div className="grid grid-cols-2 gap-4">
-          {dropdownData.topsAndSweaters.map((section, index) => (
+          {dropdownData.topsAndSweaters.map((section) => (
             <div
               key={section.title}
               className={`p-4 rounded-md ${
@@ -493,7 +493,7 @@ const Header1 = () => {
         className="absolute top-8 left-0 w-90 bg-white rounded-md shadow-lg z-50 py-4 px-6"
       >
         <div className="grid grid-cols-2 gap-4">
-          {dropdownData.pantsAndJeans.map((section,index) => (
+          {dropdownData.pantsAndJeans.map((section,) => (
             <div
               key={section.title}
               className={`p-4 rounded-md ${
