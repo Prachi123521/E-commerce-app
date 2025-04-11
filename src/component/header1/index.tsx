@@ -502,7 +502,7 @@ const Header1 = () => {
             >
               <h3 className="font-semibold text-sm mb-2">{section.title}</h3>
               <div className="flex flex-col gap-1">
-                {section.items.map((item,index) => (
+                {section.items.map((item) => (
                   <Link
                     key={`${section.title}-${item}`}
                     href="#"
