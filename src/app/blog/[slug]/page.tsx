@@ -19,8 +19,7 @@ import {
   image35,
   image36,
   image37,
-  image38,
-  image39,
+  
 } from "@/assets";
 
 const list = [
