@@ -43,33 +43,6 @@ const data = [
   },
 ];
 
-const data1 = [
-  {
-    slug: "black-friday-fund",
-    src: image37.src,
-    title: "Black Friday Fund 2023",
-    title1: "Transparency",
-  },
-  {
-    slug: "holiday-outfits",
-    src: image38.src,
-    title: (
-      <>
-        What to Wear this Season:
-        <br />
-        Holiday Outfits & Ideas
-      </>
-    ),
-    title1: "Style",
-  },
-  {
-    slug: "thanksgiving-outfits-ideas",
-    src: image39.src,
-    title: "Thanksgiving Outfit Ideas",
-    title1: "Style",
-  },
-];
-
 const data2 = [
   { slug: "carbon-commitment", src: image41.src, title: "Carbon Commitment" },
   {

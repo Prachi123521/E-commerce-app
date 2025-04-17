@@ -23,19 +23,19 @@ import {
 } from "@/assets";
 
 const list = [
-  {
+  {  id:1,
     slug: "how-to-style-winter-whites",
     src: image34.src,
     title: "How To Style Winter Whites",
     title1: "Style",
   },
-  {
+  { id:2,
     slug: "we-won-a-glossy-award",
     src: image35.src,
     title: "We Won A Glossy Award",
     title1: "Transparency",
   },
-  {
+  { id:3,
     slug: "coordinate-your-style",
     src: image36.src,
     title: (
@@ -282,7 +282,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               Honoring the Team Behind the Vision
             </p>
             <p className="ml-63 mt-12 leading-[33.24px] text-[24px] font-normal font-maison-neue">
-              Our success wouldn't be possible without the incredible minds,
+              Our success wouldn&apos;t be possible without the incredible minds,
               hands, and hearts behind<br></br> our brand. Every piece we
               design, every shoot we plan, every customer interaction — it all
               <br></br> comes back to our people. This award is for the
@@ -336,7 +336,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               Our Coordinate Your Style campaign encourages you to build a
               wardrobe with intention — think layering core pieces, adding pops
               of contrast, and never underestimating the power of accessories.
-              Whether you're dressing up for work or dialing it down on the
+              Whether you&apos;re dressing up for work or dialing it down on the
               weekend, style is what you make of it.
             </p>
 
@@ -358,7 +358,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
             </div>
 
             <p className="text-center mt-16 leading-[33.24px] text-[24px] font-normal font-maison-neue mb-12">
-              Style isn&apos;t just about what you wear — it's how you wear it.
+              Style isn&apos;t just about what you wear — it&apos;s how you wear it.
               <br></br>{" "}
               <span className="underline text-solid">
                 Coordinate your style
@@ -650,7 +650,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
 
           <div className="flex space-x-8 ml-30 mb-12">
             {list.map((list) => (
-              <div>
+              <div key={list.id}>
                 <img src={list.src} alt="" />
                 <p className="text-[30px] leading-[40px] font-normal font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer mt-2">
                   {list.title}
