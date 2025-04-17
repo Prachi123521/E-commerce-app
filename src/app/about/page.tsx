@@ -11,7 +11,6 @@ import {
   image24,
 } from "@/assets";
 
-
 const data = [
   { src: image22.src, title: "Our Products" },
   { src: image23.src, title: "Our Stores" },
@@ -20,10 +19,10 @@ const data = [
 
 const About = () => {
   return (
-    <div>
-      <div>
-        <img src={section1.src} alt="" className="ml-14" />
-        <p className="text-center font-normal mt-14 tracking-[0.2px] justify-between leading-[53.2px] text-[38px]">
+    <div className="px-4 md:px-12">
+      <div className="text-center mt-12">
+        <img src={section1.src} alt="" className="mx-auto mb-8" />
+        <p className="font-normal mt-15  tracking-wide text-[20px] md:text-[28px] lg:text-[38px] leading-relaxed font-maison-neue ">
           At Everlane, we want the right choice to be as easy <br></br>as
           putting on a great T-shirt. That&apos;s why we partner<br></br> with
           the best, ethical factories around the world.<br></br> Source only the
@@ -34,16 +33,20 @@ const About = () => {
         </p>
       </div>
 
-      <div className="flex ">
-        <img src={image18.src} alt="" className="mt-12 w-700 " />
-        <div className="bg-stone-300  w-700 mt-12">
-          <p className="mt-82 ml-20 whitespace-nowrap pr-[70px] text-xs font-semibold tracking-[0.2px] leading-[16px] text-[12px]">
+      <div className="flex flex-col lg:flex-row items-stretch mt-16 ">
+        <img
+          src={image18.src}
+          alt=""
+          className="w-full lg:w-1/2 object-cover "
+        />
+        <div className="bg-neutral-200 p-6 lg:p-10 w-full lg:w-1/2  flex flex-col justify-center">
+          <p className=" whitespace-nowrap  font-maison-neue font-semibold hover:underline cursor-pointer tracking-wide text-xs">
             OUR FACTORIES
           </p>
-          <p className="ml-20 whitespace-nowrap text-4xl tracking-[0.2]">
+          <p className="text-[28px] lg:text-[40px] mb-4 whitespace-nowrap hover:underline cursor-pointer font-normal font-maison-neue">
             Our ethical approach.
           </p>
-          <p className="ml-20 mt-6 tracking-[1.2] font-maison-neue whitespace-nowrap">
+          <p className="text-sm tracking-wide font-normal font-maison-neue whitespace-nowrap ">
             We spend months finding the best factories around the world-the same
             <br></br>ones that produce your favourite designer labels. We visit
             them often and<br></br> build strong personal relationships with the
@@ -54,17 +57,19 @@ const About = () => {
         </div>
       </div>
 
-      <div>
-        <img src={image19.src} alt="" className="w-1400" />
+      <div className="my-12">
+        <img src={image19.src} alt="" className="w-full" />
       </div>
 
-      <div className=" flex ">
-        <div>
-          <p className="ml-12 mt-45 text-xs font-bold">OUR QUALITY</p>
-          <p className="ml-12 text-5xl">
+      <div className="flex flex-col lg:flex-row items-stretch mt-16">
+        <div className="w-full lg:w-1/2 bg-red-50 p-6 lg:p-10 flex flex-col justify-center">
+          <p className="text-xs mb-2 font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer font-semibold">
+            OUR QUALITY
+          </p>
+          <p className="text-[28px] lg:text-[40px] font-normal mb-4 font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer">
             Designed <br></br>to last.
           </p>
-          <p className="whitespace-nowrap ml-12 mt-5">
+          <p className="whitespace-nowrap text-sm font-normal font-maison-neue ">
             At Everlane, we&apos;s re not on big trends. We want you to wear our
             pieces for<br></br> years, even decades, to come. That&apos;s why we
             source the finest materials<br></br> and factories for our timeless
@@ -72,17 +77,25 @@ const About = () => {
             shoes, and Peruvian Pema tees.
           </p>
         </div>
-        <img src={image20.src} alt="" className="ml-64" />
+        <img
+          src={image20.src}
+          alt=""
+          className="w-full lg:w-1/2 object-cover"
+        />
       </div>
 
-      <img src={image21.src} alt="" className="w-1400" />
+      <img src={image21.src} alt="" className="w-full my-12" />
 
-      <div className="flex">
-        <img src={pic2.src} alt="" className="ml-12" />
-        <div className="mt-56 ml-25">
-          <p className="whitespace-nowrap">OUR PRICES</p>
-          <p className="whitespace-nowrap text-4xl">Radically Transparent.</p>
-          <p className="whitespace-nowrap mt-9 tracking-[1.4] font-base">
+      <div className="flex flex-col lg:flex-row items-center gap-8">
+        <img src={pic2.src} alt="" className="w-full lg:w-1/2" />
+        <div className="w-full lg:w-1/2">
+          <p className="whitespace-nowrap text-sm mb-2 font-semibold font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer">
+            OUR PRICES
+          </p>
+          <p className="whitespace-nowrap text-[28px] lg:text-[40px] mb-4 font-normal font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer ">
+            Radically Transparent.
+          </p>
+          <p className="whitespace-nowrap text-sm font-normal font-maison-neue">
             We believe our customers have a right to know how much their clothes
             <br></br>cost to make. We reveal the true costs behind all of our
             products-from<br></br>
@@ -91,18 +104,24 @@ const About = () => {
           </p>
         </div>
       </div>
-      <p className="mt-12 text-center text-3xl">More to Explore</p>
-      <div className="flex space-x-8 ml-55 mt-8 text-center">
+
+      <p className="mt-20 text-center text-[24px] lg:text-[32px] font-maison-neue font-normal hover:underline hover:decoration-blue-400 cursor-pointer">
+        More to Explore
+      </p>
+      <div className="mt-8 flex flex-col sm:flex-row gap-6 justify-center">
         {data.map((data) => (
-          <div key={data.title}>
-            <img src={data.src} alt="" />
-            <p className="mt-4 tracking-[0.2] text-sm font-base hover:underline mb-18">
+          <div key={data.title} className="text-center">
+            <img
+              src={data.src}
+              alt=""
+              className="w-full max-w-[200px] mx-auto"
+            />
+            <p className="mt-4 text-[16px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer mb-18">
               {data.title}
             </p>
           </div>
         ))}
       </div>
-      
     </div>
   );
 };

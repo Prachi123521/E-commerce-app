@@ -76,7 +76,7 @@ const Slider2 = () => {
           {data.map((data) => (
             <div key={data.title1}>
               <img src={data.src} alt="" className="mt-8 ml-20  h-[420px]" />
-              <p className="text-xs tracking-[0.2] font-maison-neue whitespace-nowrap ml-20 ">
+              <p className="text-xs tracking-[0.2] font-maison-neue whitespace-nowrap ml-20 hover:underline cursor-pointer ">
                 {data.title1}
 
                 <span className="ml-20 ">{data.price}</span>

@@ -132,11 +132,11 @@ const Footer = () => {
           </div>
 
           <div className="font-light  flex items-center justify-end">
-            <h2 className="bg-stone-100 py-3 px-18  px-5 border-4 p-4  mb-34 bg-white-50 outline-offset float-top  ">
+            <h2 className="bg-stone-100 py-3 px-18  px-5  border-4 p-4  mb-42 bg-white-50 outline-offset float-top  ">
               <input type="email" placeholder="Email Address" />
             </h2>
-            <div className=" ">
-              <button className="text-white mb-34 bg-stone-900 py-3 px-3 ">
+            <div>
+              <button className="text-white mb-42 bg-stone-900 py-3 px-3 ">
                 <ArrowRight />
               </button>
             </div>
