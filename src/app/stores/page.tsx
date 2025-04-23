@@ -48,7 +48,7 @@ const Stores = () => {
   ];
 
   return (
-    <div  className="px-4 sm:px-6 lg:px-16">
+    <div className="px-4 sm:px-6 lg:px-16">
       <p className="text-center mt-9 font-normal text-[32px] leading-[40px] font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer">
         Stores
       </p>
@@ -58,7 +58,7 @@ const Stores = () => {
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-3">
         {data.map((data) => (
           <div key={data.id}>
-            <img src={data.src} alt="" className="w-full h-auto "/>
+            <img src={data.src} alt="" className="w-full h-auto " />
             <div>
               <p className="font-maison-neue mt-2 tracking-[1px] leading-[16px] text-[10px] font-normal hover:underline hover:decoration-blue-400 cursor-pointer">
                 {data.title}

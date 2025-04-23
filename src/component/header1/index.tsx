@@ -10,7 +10,7 @@ import User from "../user";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
-//import { IoIosArrowDown } from "react-icons/io";
+import { useRouter } from "next/navigation";
 
 const dropdownData = {
   holiday: [
@@ -184,6 +184,7 @@ const dropdownData = {
 
 const Header1 = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const isBlogPage = pathname.startsWith("/blog");
   const [isHolidayOpen, setIsHolidayOpen] = useState(false);
@@ -195,6 +196,10 @@ const Header1 = () => {
   const [isOuterwearOpen, setIsOuterwearOpen] = useState(false);
   const [isShoesBagsOpen, setIsShoesBagsOpen] = useState(false);
   const [isSaleOpen, setIsSaleOpen] = useState(false);
+
+  const handleSearchClick = () => {
+    router.push("/search");
+  };
 
   return (
     <>
@@ -223,7 +228,9 @@ const Header1 = () => {
             <Logo>E V E R L A N E</Logo>
           </div>
           <div className=" w-auto md:w-1/3 flex items-center justify-end gap-5">
-            <SearchBar />
+            <div onClick={handleSearchClick}>
+              <SearchBar />
+            </div>
             <User />
             <CartIcon />
           </div>
@@ -246,9 +253,9 @@ const Header1 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0 w-full bg-white  py-12 px-45"
+                  className="absolute top-8 left-0 right-0 top-full w-[1280px] bg-white rounded-md shadow-lg z-50 py-6 px-4 "
                 >
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-3 gap-8">
                     {dropdownData.holiday.map((section) => (
                       <div
                         key={section.title}

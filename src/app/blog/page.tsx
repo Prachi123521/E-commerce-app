@@ -54,7 +54,6 @@ const data2 = [
 ];
 
 const allArticals = [
-  
   {
     slug: "black-friday-fund",
     src: image37.src,
@@ -106,15 +105,16 @@ const allArticals = [
   },
 ];
 
-
 const Blog = () => {
-
   const [visibleCount, setVisibleCount] = useState(3);
 
-  const handleLoadMore = () => {
-    setVisibleCount((prevCount) => prevCount + 3);
+  const handleToggleArticles = () => {
+    if (visibleCount >= allArticals.length) {
+      setVisibleCount(3); // Show less: reset to initial
+    } else {
+      setVisibleCount((prevCount) => prevCount + 3); // Load more
+    }
   };
-
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,7 +154,7 @@ const Blog = () => {
 
       <div className="mt-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allArticals.slice(0, visibleCount).map((artical, index)=> (
+          {allArticals.slice(0, visibleCount).map((artical, index) => (
             <div key={index}>
               <img src={artical.src} alt="" className="w-full h-auto" />
               <Link href={`/blog/${artical.slug}`}>
@@ -169,13 +169,18 @@ const Blog = () => {
           ))}
         </div>
       </div>
-        
-      {visibleCount < allArticals.length && ( 
-      <div className="mt-16 text-center">
-        <button  onClick ={handleLoadMore} className=" px-8 py-4  tracking-wide text-sm hover:underline font-maison-neue font-maison-neue hover:decoration-blue-400 cursor-pointer font-semibold text-white bg-stone-950 rounded-sm">
-          Load more Articals
-        </button>
-      </div>
+
+      {allArticals.length > 3 && (
+        <div className="mt-16 text-center">
+          <button
+            onClick={handleToggleArticles}
+            className=" px-8 py-4  tracking-wide text-sm hover:underline font-maison-neue font-maison-neue hover:decoration-blue-400 cursor-pointer font-semibold text-white bg-stone-950 rounded-sm"
+          >
+            {visibleCount >= allArticals.length
+              ? "Show Less"
+              : "Load More Articles"}
+          </button>
+        </div>
       )}
 
       <div className="mt-16">
@@ -187,7 +192,7 @@ const Blog = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {data2.map((data2) => (
           <div key={data2.src}>
             <img src={data2.src} alt="" className="w-full h-auto" />

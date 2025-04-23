@@ -5,6 +5,7 @@ const headerData = [
     {title:"Men" , href : "/men"},
     {title:"About" , href : "/about"},
     {title:"Blog" , href : "/blog"},
+    {title:"Stores", href:"/stores"},
 ];
 
 export default headerData;

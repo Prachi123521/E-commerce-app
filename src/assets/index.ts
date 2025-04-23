@@ -220,3 +220,67 @@ export{image49};
 import star from "./Frame 1 (4).png";
 export{star};
 
+import image50 from "./image (50).png";
+export{image50};
+
+import image51 from "./image (51).png";
+export{image51};
+
+import image52 from "./image (52).png";
+export{image52};
+
+import image54 from "./image (54).png";
+export{image54};
+
+import image55 from "./image (55).png";
+export{image55};
+
+import image56 from "./image (56).png";
+export{image56};
+
+import image57 from "./image (57).png";
+export{image57};
+
+import image58 from "./image (58).png";
+export{image58};
+
+import picture from "./Frame 2 (1).png";
+export{picture};
+
+import image59 from "./image (59).png";
+export{image59};
+
+import image60 from "./image (60).png";
+export{image60};
+
+import van from "./download.png";
+export{van};
+
+import image61 from "./image (61).png";
+export{image61};
+
+import image62 from "./image (62).png";
+export{image62};
+
+import image63 from "./image (63).png";
+export{image63};
+
+import image64 from "./image (64).png";
+export{image64};
+
+import image65 from "./image (65).png";
+export{image65};
+
+import image66 from "./image (66).png";
+export{image66};
+
+import rating from "./Frame 2 (2).png";
+export{rating};
+
+import frame0 from "./Frame 2 (3).png";
+export{frame0};
+
+import ratings from "./Frame 4.png";
+export{ratings};
+
+

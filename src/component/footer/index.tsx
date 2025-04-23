@@ -131,12 +131,16 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="font-light  flex items-center justify-end">
-            <h2 className="bg-stone-100 py-3 px-18  px-5  border-4 p-4  mb-42 bg-white-50 outline-offset float-top  ">
-              <input type="email" placeholder="Email Address" />
+          <div className="font-light flex justify-end">
+            <h2>
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="bg-white mt-12 text-sm px-4 py-4 w-[280px] border border-gray-300  text-left "
+              />
             </h2>
             <div>
-              <button className="text-white mb-42 bg-stone-900 py-3 px-3 ">
+              <button className="text-white mt-12 bg-stone-900 py-4 px-3 ">
                 <ArrowRight />
               </button>
             </div>

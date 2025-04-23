@@ -19,23 +19,25 @@ import {
   image35,
   image36,
   image37,
-  
 } from "@/assets";
 
 const list = [
-  {  id:1,
+  {
+    id: 1,
     slug: "how-to-style-winter-whites",
     src: image34.src,
     title: "How To Style Winter Whites",
     title1: "Style",
   },
-  { id:2,
+  {
+    id: 2,
     slug: "we-won-a-glossy-award",
     src: image35.src,
     title: "We Won A Glossy Award",
     title1: "Transparency",
   },
-  { id:3,
+  {
+    id: 3,
     slug: "coordinate-your-style",
     src: image36.src,
     title: (
@@ -50,31 +52,35 @@ const list = [
 ];
 
 const data1 = [
-  { id:1,
+  {
+    id: 1,
     src: image45.src,
     title: "The Cashmere Boxy Crew Sweater",
     price: "$139",
     title1: "Bone",
   },
-  { id:2,
+  {
+    id: 2,
     src: image46.src,
     title: "The Coduory Wide-Leg Pant",
     price: "$69",
     title1: "Canavas",
   },
-  { id:3,
+  {
+    id: 3,
     src: image47.src,
     title: "The Organic Cotton Chunky Beanie",
     price: "$32",
     title1: "Canavas",
   },
-  { id:4, 
+  {
+    id: 4,
     src: image48.src,
     title: "The Chelsea",
     price: "$137",
     title1: "Off-White",
   },
-  { id:5,src: image49.src, title: "The Re:Down@Puffer", title1: "Bone" },
+  { id: 5, src: image49.src, title: "The Re:Down@Puffer", title1: "Bone" },
 ];
 
 const data2 = [{ src: image35, title: "Glossy Award" }];
@@ -282,8 +288,8 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               Honoring the Team Behind the Vision
             </p>
             <p className="ml-63 mt-12 leading-[33.24px] text-[24px] font-normal font-maison-neue">
-              Our success wouldn&apos;t be possible without the incredible minds,
-              hands, and hearts behind<br></br> our brand. Every piece we
+              Our success wouldn&apos;t be possible without the incredible
+              minds, hands, and hearts behind<br></br> our brand. Every piece we
               design, every shoot we plan, every customer interaction — it all
               <br></br> comes back to our people. This award is for the
               creatives, the problem-solvers, and the <br></br>passionate
@@ -358,7 +364,8 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
             </div>
 
             <p className="text-center mt-16 leading-[33.24px] text-[24px] font-normal font-maison-neue mb-12">
-              Style isn&apos;t just about what you wear — it&apos;s how you wear it.
+              Style isn&apos;t just about what you wear — it&apos;s how you wear
+              it.
               <br></br>{" "}
               <span className="underline text-solid">
                 Coordinate your style

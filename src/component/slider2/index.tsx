@@ -79,7 +79,7 @@ const Slider2 = () => {
               <p className="text-xs tracking-[0.2] font-maison-neue whitespace-nowrap ml-20 hover:underline cursor-pointer ">
                 {data.title1}
 
-                <span className="ml-20 ">{data.price}</span>
+                <span className="ml-10">{data.price}</span>
               </p>
 
               <p className="text-xs text-gray-500 font-maison-neue ml-20 mb-12 hover:underline cursor-pointer">

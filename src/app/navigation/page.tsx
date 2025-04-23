@@ -60,21 +60,21 @@ const Navigation = () => {
 
         <div className="col-span-2 flex gap-4 sm:gap-3 md:gap-2 lg:gap-4 ">
           <div>
-          <img
-            src={frame.src}
-            alt="frame"
-            className="w-full max-w-[200px] object-cover"
-          />
-        </div>
+            <img
+              src={frame.src}
+              alt="frame"
+              className="w-full max-w-[200px] object-cover"
+            />
+          </div>
 
-        {/* Second Image */}
-        <div className="flex-1">
-          <img
-            src={pic.src}
-            alt="pic"
-            className="w-full max-w-[200px] object-cover "
-          />
-        </div>
+          {/* Second Image */}
+          <div className="flex-1">
+            <img
+              src={pic.src}
+              alt="pic"
+              className="w-full max-w-[200px] object-cover "
+            />
+          </div>
         </div>
       </div>
     </div>
