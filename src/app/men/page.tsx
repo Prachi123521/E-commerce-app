@@ -89,7 +89,6 @@ const Men = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [showCategoryDropdown, setShowCategoryDropdown] = useState<boolean>(true);
   const [showMoreCategories, setShowMoreCategories] = useState(false);
-  const visibleCategories = showMoreCategories ? categoryList : categoryList.slice(0, 4);
   const [showColorDropdown, setShowColorDropdown] = useState(true);
   const [showMoreWaistSizes, setShowMoreWaistSizes] = useState(false);
   const allWaistSizes = ["30", "32", "34", "36", "38", "40", "42", "44", "46", "48", "50", "52"];
@@ -288,7 +287,7 @@ const visibleColors = showMoreColors ? allColors : allColors.slice(0, 9);
           Home / Men
         </div>
         <h1 className="leading-[40px] text-[32px] font-normal font-maison-neue cursor-pointer hover:underline hover:decoration-blue-400 mb-2">
-          Men's Clothing & Apparel - New Arrivals
+          Men&apos;s Clothing & Apparel - New Arrivals
         </h1>
         <p className="tracking-[0.64px] leading-[24px] text-[16px] font-normal font-maison-neue cursor-pointer hover:underline hover:decoration-blue-400 mb-4">
           Featured

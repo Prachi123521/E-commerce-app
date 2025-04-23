@@ -195,7 +195,7 @@ production , the <br></br>Global Recycled Standards (GRS) sets requirements<br><
 </div>
 
 <p className='leading-[33.24px] text-[24px] font-semibold font-maison-neue flex justify-center hover:underline hover:decoration-blue-400'>Transparent Pricing</p>
-<p className='text-center mt-4 tracking-[1.4px] leading-[16.8px] text-[14px] font-normal font-maison-neue'>We publish what it costs us to make every one of our products. There are a lot of costs<br></br>we can't neatly account for - like
+<p className='text-center mt-4 tracking-[1.4px] leading-[16.8px] text-[14px] font-normal font-maison-neue'>We publish what it costs us to make every one of our products. There are a lot of costs<br></br>we can&apos;t neatly account for - like
 design, fittings, wear testing, rent on office and retail <br></br>space - but we believe you deserve to know what goes into making the 
 products you <br></br>love.</p>
 
