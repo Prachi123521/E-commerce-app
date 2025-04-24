@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Image1, Image2, Image3, picture1 } from "@/assets";
 import Collections1 from "../collections1";
 
@@ -67,7 +67,7 @@ const Collections = () => {
           className="w-full h-auto object-cover"
         />
         <p className="absolute  cursor-pointer top-1/3 left-1/2 transform -translate-x-1/2 text-white text-lg sm:text-2xl font-maison-neue font-semibold text-center hover:underline">
-          We're on a Mission To Clean Up the Industry
+          We&apos;re on a Mission To Clean Up the Industry
         </p>
         <p className="absolute cursor-pointer top-[44%] top-1/2 left-1/2 transform -translate-x-1/2 text-white text-sm sm:text-base font-maison-neue font-light text-center hover:underline mt-2">
           Read about our progress in our latest Impact Report.
