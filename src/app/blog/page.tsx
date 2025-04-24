@@ -120,7 +120,7 @@ const Blog = () => {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <img src={Rectangle.src} alt="" className="w-full mt-12" />
       <div className="mt-6">
-        <p className="lg:text-[160px]  text-[48px] sm:text-[72px] font-maison-neue font-semibold mt-2 ml-25 leading-tight hover:underline hover:decoration-blue-400 cursor-pointer">
+        <p className="lg:text-[120px] xl:text-[160px] text-[48px] sm:text-[72px] font-maison-neue font-semibold mt-2 ml-6 sm:ml-8 lg:ml-16 leading-tight hover:underline hover:decoration-blue-400 cursor-pointer">
           everworld
         </p>
         <p className=" mt-4  text-[18px] sm:text-[20px] lg:text-[24px] font-normal font-maison-neue  hover:underline hover:decoration-blue-400 cursor-pointer">
@@ -132,10 +132,10 @@ const Blog = () => {
         </p>
       </div>
 
-      <p className=" font-maison-neue  ml-25 font-semibold  leading-[72px] text-[54px] mt-23 mb-8 hover:underline hover:decoration-blue-400 cursor-pointer">
+      <p className=" font-maison-neue ml-6 sm:ml-8 lg:ml-16 font-semibold  leading-[72px] text-[54px] mt-23 mb-8 hover:underline hover:decoration-blue-400 cursor-pointer">
         The Latest
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
         {data.map((data) => (
           <div key={data.src}>
             <img src={data.src} alt="" className="w-full h-auto" />
@@ -153,7 +153,7 @@ const Blog = () => {
       </div>
 
       <div className="mt-24">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 ">
           {allArticals.slice(0, visibleCount).map((artical, index) => (
             <div key={index}>
               <img src={artical.src} alt="" className="w-full h-auto" />
@@ -171,7 +171,7 @@ const Blog = () => {
       </div>
 
       {allArticals.length > 3 && (
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center px-4 sm:px-0">
           <button
             onClick={handleToggleArticles}
             className=" px-8 py-4  tracking-wide text-sm hover:underline font-maison-neue font-maison-neue hover:decoration-blue-400 cursor-pointer font-semibold text-white bg-stone-950 rounded-sm"
@@ -192,7 +192,7 @@ const Blog = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
         {data2.map((data2) => (
           <div key={data2.src}>
             <img src={data2.src} alt="" className="w-full h-auto" />
@@ -203,7 +203,7 @@ const Blog = () => {
         ))}
       </div>
 
-      <div className="mt-24 bg-stone-950 text-white py-16 px-15 ">
+      <div className="mt-24 bg-stone-950 text-white py-16 px-4 sm:px-8">
         <p className=" mb-6 text-[32px] sm:text-[48px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer">
           Follow us on social for more{" "}
         </p>

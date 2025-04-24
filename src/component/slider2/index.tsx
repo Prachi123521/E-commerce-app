@@ -41,65 +41,87 @@ const data = [
 const Slider2 = () => {
   const settings = {
     dots: true,
-    infinte: true,
+    infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
     centerMode: false,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const sliderRef = React.useRef<Slider>(null);
-  const handleNext = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickNext();
-    }
-  };
 
-  const handlePrev = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
-    }
-    console.log("hello");
-  };
+  const handleNext = () => sliderRef.current?.slickNext();
+  const handlePrev = () => sliderRef.current?.slickPrev();
 
   return (
-    <>
-      <div className="absolute inset-0 ml-5 mt-640 ">
-        <button onClick={handlePrev}>
-          <ChevronLeft />
-        </button>
-      </div>
+    <div className="relative px-4 sm:px-6 lg:px-12 py-15">
+      {/* Left Arrow */}
+      <button
+        onClick={handlePrev}
+        className="absolute left-3 top-1/2 transform -translate-y-1/2 p-2 bg-white z-10 "
+      >
+        <ChevronLeft />
+      </button>
 
-      <div className="px-10">
-        <Slider ref={sliderRef} {...settings}>
-          {data.map((data) => (
-            <div key={data.title1}>
-              <img src={data.src} alt="" className="mt-8 ml-20  h-[420px]" />
-              <p className="text-xs tracking-[0.2] font-maison-neue whitespace-nowrap ml-20 hover:underline cursor-pointer ">
-                {data.title1}
+      {/* Slider */}
+      <Slider ref={sliderRef} {...settings}>
+        {data.map((item, index) => (
+          <div key={index} className=" ">
+            <img
+              src={item.src}
+              alt={item.title1}
+              className="w-auto h-[420px] object-cover justify-center  "
+            />
 
-                <span className="ml-10">{data.price}</span>
+            {/* Title and Price on same line below the image */}
+            <div className="mt-2 flex justify-between items-center text-[12px] font-maison-neue mx-auto">
+              <p className="truncate hover:underline cursor-pointer">
+                {item.title1}
               </p>
-
-              <p className="text-xs text-gray-500 font-maison-neue ml-20 mb-12 hover:underline cursor-pointer">
-                {data.title2}
-                <span className="text-stone-950">{data.title}</span>
-                <br></br>
-
-                <span className="mt-4">{data.title3}</span>
-              </p>
+              <span className="font-semibold">{item.price}</span>
             </div>
-          ))}
-        </Slider>
-      </div>
+            <p className="text-xs text-gray-500 font-maison-neue mb-12 hover:underline cursor-pointer">
+              {item.title2}
+            </p>
+          </div>
+        ))}
+      </Slider>
 
-      <div className="absolute inset-0 ml-368 mt-640">
-        <button onClick={handleNext}>
-          <ChevronRight />
-        </button>
-      </div>
-    </>
+      {/* Right Arrow */}
+      <button
+        onClick={handleNext}
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-white z-10"
+      >
+        <ChevronRight />
+      </button>
+    </div>
   );
 };
 

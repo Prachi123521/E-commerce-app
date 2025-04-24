@@ -1,123 +1,180 @@
 "use client";
-import React,{useState} from "react";
-import { image50, image51, image52,image54,image55,image56,image57,image58 } from "@/assets";
+import React, { useState } from "react";
+import {
+  image50,
+  image51,
+  image52,
+  image54,
+  image55,
+  image56,
+  image57,
+  image58,
+} from "@/assets";
 
 const data = [
   {
     id: 1,
     src: image50.src,
     title: "The Cloud Relaxed Cardigan",
+    title0: "$188",
+    discountedPrice: "$132",
     title1: "Black",
-    category:"Cardigan",
+    category: "Cardigan",
   },
   {
     id: 2,
     src: image51.src,
     title: "The Organic Cotton Long-Sleeve Turtleneck",
+    title0: "$50",
+    discountedPrice: "$35",
     title1: "Black",
-    title2:"ORGANIC COTTON",
-    category:"Long-Sleeve",
+    title2: "ORGANIC COTTON",
+    category: "Long-Sleeve",
   },
   {
     id: 3,
     src: image52.src,
     title: "The Wool Flannel Pant",
+    title0: "$138",
+    discountedPrice: "$97",
     title1: "Heather Charcoal",
-    title2:"RENWED MATERIALS",
-    title3:"CLEANER CHEMISTRY",
-    category:"Pant",
+    title2: "RENWED MATERIALS",
+    title3: "CLEANER CHEMISTRY",
+    category: "Pant",
   },
   {
     id: 4,
     src: image52.src,
     title: "The Cloud Relaxed Cardigan",
+    title0: "$188",
+    discountedPrice: "$32",
     title1: "Black",
-    category:"Cardigan",
+    category: "Cardigan",
   },
   {
     id: 5,
     src: image54.src,
     title: "The Organic Cotton Long-Sleeve Turtleneck",
+    title0: "$50",
+    discountedPrice: "$35",
     title1: "Black",
-    title2:"ORGANIC COTTON",
-    category:"Long-Sleeve",
+    title2: "ORGANIC COTTON",
+    category: "Long-Sleeve",
   },
   {
     id: 6,
     src: image55.src,
     title: "The Wool Flannel Pant",
+    title0: "$138",
+    discountedPrice: "$97",
     title1: "Heather Charcoal",
-    title2:"RENWED MATERIALS",
-    title3:"CLEANER CHEMISTRY",
-    category:"Pant",
+    title2: "RENWED MATERIALS",
+    title3: "CLEANER CHEMISTRY",
+    category: "Pant",
   },
   {
     id: 7,
     src: image56.src,
     title: "The Cloud Relaxed Cardigan",
+    title0: "$188",
+    discountedPrice: "$132",
     title1: "Black",
-    category:"Cardigan",
+    category: "Cardigan",
   },
   {
     id: 8,
     src: image57.src,
     title: "The Organic Cotton Long-Sleeve Turtleneck",
+    title0: "$50",
+    discountedPrice: "$35",
     title1: "Black",
-    title2:"ORGANIC COTTON",
-    category:"Long-Sleeve",
+    title2: "ORGANIC COTTON",
+    category: "Long-Sleeve",
   },
   {
     id: 9,
     src: image58.src,
     title: "The Wool Flannel Pant",
+    title0: "$138",
+    discountedPrice: "$97",
     title1: "Heather Charcoal",
-    title2:"RENWED MATERIALS",
-    title3:"CLEANER CHEMISTRY",
-    category:"Pant",
+    title2: "RENWED MATERIALS",
+    title3: "CLEANER CHEMISTRY",
+    category: "Pant",
   },
 ];
 
 const categoryList = [
- "Everyone-All Gender Collection",
+  "Everyone-All Gender Collection",
   "Accessories & Gift Cards",
- "Backpacks, Weekenders &  Duffle Bags",
- "Dress Shirts & Button Downs",
+  "Backpacks, Weekenders &  Duffle Bags",
+  "Dress Shirts & Button Downs",
   "Hoodies & Sweatshirts",
 ];
 
 const Men = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [showCategoryDropdown, setShowCategoryDropdown] = useState<boolean>(true);
+  const [showCategoryDropdown, setShowCategoryDropdown] =
+    useState<boolean>(true);
   const [showMoreCategories, setShowMoreCategories] = useState(false);
   const [showColorDropdown, setShowColorDropdown] = useState(true);
   const [showMoreWaistSizes, setShowMoreWaistSizes] = useState(false);
-  const allWaistSizes = ["30", "32", "34", "36", "38", "40", "42", "44", "46", "48", "50", "52"];
-const visibleWaistSizes = showMoreWaistSizes ? allWaistSizes : allWaistSizes.slice(0, 8);
-const [showMoreClothingSizes, setShowMoreClothingSizes] = useState(false);
+  const allWaistSizes = [
+    "30",
+    "32",
+    "34",
+    "36",
+    "38",
+    "40",
+    "42",
+    "44",
+    "46",
+    "48",
+    "50",
+    "52",
+  ];
+  const visibleWaistSizes = showMoreWaistSizes
+    ? allWaistSizes
+    : allWaistSizes.slice(0, 8);
+  const [showMoreClothingSizes, setShowMoreClothingSizes] = useState(false);
 
-const allClothingSizes = ["XS", "S", "M", "L", "XL", "XXL", "XXXL", "4XL", "5XL", "6XL", "7XL", "8XL"];
-const visibleClothingSizes = showMoreClothingSizes ? allClothingSizes : allClothingSizes.slice(0, 8);
+  const allClothingSizes = [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "XXXL",
+    "4XL",
+    "5XL",
+    "6XL",
+    "7XL",
+    "8XL",
+  ];
+  const visibleClothingSizes = showMoreClothingSizes
+    ? allClothingSizes
+    : allClothingSizes.slice(0, 8);
 
-const [showMoreColors, setShowMoreColors] = useState(false);
+  const [showMoreColors, setShowMoreColors] = useState(false);
 
-const allColors = [
-  { name: "Black", class: "bg-black" },
-  { name: "Blue", class: "bg-blue-900" },
-  { name: "Brown", class: "bg-brown-200" },
-  { name: "Green", class: "bg-green-900" },
-  { name: "Gray", class: "bg-gray-200" },
-  { name: "Orange", class: "bg-orange-400" },
-  { name: "Pink", class: "bg-pink-500" },
-  { name: "Red", class: "bg-red-900" },
-  { name: "Stone", class: "bg-stone-400" },
-  { name: "Orange", class: "bg-orange-400" },
-  { name: "Indigo", class: "bg-indigo-500" },
-  { name: "Lime", class: "bg-lime-500" },
-  { name: "Rose", class: "bg-rose-400" },
-];
+  const allColors = [
+    { name: "Black", class: "bg-black" },
+    { name: "Blue", class: "bg-blue-900" },
+    { name: "Brown", class: "bg-brown-200" },
+    { name: "Green", class: "bg-green-900" },
+    { name: "Gray", class: "bg-gray-200" },
+    { name: "Orange", class: "bg-orange-400" },
+    { name: "Pink", class: "bg-pink-500" },
+    { name: "Red", class: "bg-red-900" },
+    { name: "Stone", class: "bg-stone-400" },
+    { name: "Orange", class: "bg-orange-400" },
+    { name: "Indigo", class: "bg-indigo-500" },
+    { name: "Lime", class: "bg-lime-500" },
+    { name: "Rose", class: "bg-rose-400" },
+  ];
 
-const visibleColors = showMoreColors ? allColors : allColors.slice(0, 9);
-
+  const visibleColors = showMoreColors ? allColors : allColors.slice(0, 9);
 
   // ✅ Toggle category checkbox
   const handleCheckboxChange = (category: string) => {
@@ -135,54 +192,58 @@ const visibleColors = showMoreColors ? allColors : allColors.slice(0, 9);
       : data;
 
   return (
-
-
     <div className="flex mt-8 px-6 lg:px-20 gap-12">
       {/* Left Sidebar */}
       <div className="w-64 flex-shrink-0">
-        <p className="text-sm font-medium mb-4 tracking-[0.2px] leading-[16px] text-[12px] font-normal font-maison-neue">249 Products</p>
+        <p className="text-sm font-medium mb-4 tracking-[0.2px] leading-[16px] text-[12px] font-normal font-maison-neue">
+          249 Products
+        </p>
         <div className="mt-7">
-        <hr></hr>
+          <hr></hr>
         </div>
 
         {/* Category Section */}
         <div className="mb-6">
-        <div
+          <div
             className="flex justify-between items-center cursor-pointer mb-2"
             onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
           >
-            <h3 className="text-sm font-semibold mt-4 tracking-[0.42px] leading-[21px] text-[14px] font-semibold font-maison-neue">Category</h3>
+            <h3 className="text-sm font-semibold mt-4 tracking-[0.42px] leading-[21px] text-[14px] font-semibold font-maison-neue">
+              Category
+            </h3>
             <span
-            className={`transform transition-transform duration-300 mt-5 ${
-      showCategoryDropdown ? "rotate-180" : "rotate-0"
-    }`}
-  >
-    ▼
-    </span>
-            </div>
-            
+              className={`transform transition-transform duration-300 mt-5 ${
+                showCategoryDropdown ? "rotate-180" : "rotate-0"
+              }`}
+            >
+              ▼
+            </span>
+          </div>
 
           {showCategoryDropdown && (
-          <form className="space-y-2 text-sm text-gray-700 mt-3">
-            {categoryList.map((category) => (
-              <label key={category} className="flex items-center gap-2 cursor-pointer tracking-[0.2px] leading-[16px] text-[12px] font-normal font-maison-neue">
-                <input
-                  type="checkbox"
-                  checked={selectedCategories.includes(category)}
-                  onChange={() => handleCheckboxChange(category)}
-                  className="accent-black w-9 h-9 "
-                />
-                {category}
-              </label>
-            ))}
+            <form className="space-y-2 text-sm text-gray-700 mt-3">
+              {categoryList.map((category) => (
+                <label
+                  key={category}
+                  className="flex items-center gap-2 cursor-pointer tracking-[0.2px] leading-[16px] text-[12px] font-normal font-maison-neue"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes(category)}
+                    onChange={() => handleCheckboxChange(category)}
+                    className="accent-black w-9 h-9 cursor-pointer "
+                  />
+                  {category}
+                </label>
+              ))}
               <button
-        type="button"
-        onClick={() => setShowMoreCategories(!showMoreCategories)}
-        className="text-xs text-gray-600 underline mt-1"
-      >
-        {showMoreCategories ? "View Less" : "View More"}
-      </button>
-          </form>
+                type="button"
+                onClick={() => setShowMoreCategories(!showMoreCategories)}
+                className="text-xs text-gray-600 underline mt-1 cursor-pointer"
+              >
+                {showMoreCategories ? "View Less" : "View More"}
+              </button>
+            </form>
           )}
         </div>
         <hr></hr>
@@ -190,96 +251,107 @@ const visibleColors = showMoreColors ? allColors : allColors.slice(0, 9);
         {/*Color Section */}
 
         <div className="mb-6">
-  <div className="flex justify-between cursor-pointer mb-2"
-   onClick={() => setShowColorDropdown((prev) => !prev)}>
-    <h3 className="text-sm font-semibold mt-5">Color</h3>
-    <span className="transform transition-transform duration-300 mt-5">▼</span>
-  </div>
-  {showColorDropdown && (
-   <div className="grid grid-cols-3 gap-x-4 gap-y-4 mt-4 lg:px-9">
-   {visibleColors.map((color, index) => (
-     <div key={index} className="flex flex-col items-center space-y-1">
-       <button
-         className={`w-6 h-6 rounded-full border border-gray-300 ${color.class} hover:scale-105 transition-transform`}
-       />
-       <span className="text-[10px] text-gray-600">{color.name}</span>
-     </div>
-   ))}
+          <div
+            className="flex justify-between cursor-pointer mb-2"
+            onClick={() => setShowColorDropdown((prev) => !prev)}
+          >
+            <h3 className="text-sm font-semibold mt-5">Color</h3>
+            <span className="transform transition-transform duration-300 mt-5 cursor-pointer">
+              ▼
+            </span>
+          </div>
+          {showColorDropdown && (
+            <div className="grid grid-cols-3 gap-x-4 gap-y-4 mt-4 lg:px-9">
+              {visibleColors.map((color, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center space-y-1"
+                >
+                  <button
+                    className={`w-6 h-6 rounded-full cursor-pointer border border-gray-300 ${color.class} hover:scale-105 transition-transform`}
+                  />
+                  <span className="text-[10px] text-gray-600">
+                    {color.name}
+                  </span>
+                </div>
+              ))}
 
-   {/* View More / Less Button */}
-   <div className="col-span-3 ">
-     <button
-       onClick={() => setShowMoreColors(!showMoreColors)}
-       className="text-xs text-gray-600 underline mt-2"
-     >
+              {/* View More / Less Button */}
+              <div className="col-span-3 ">
+                <button
+                  onClick={() => setShowMoreColors(!showMoreColors)}
+                  className="text-xs text-gray-600 underline mt-2 cursor-pointer"
+                >
+                  {showMoreColors ? "View Less" : "View More"}
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
 
-{showMoreColors ? "View Less" : "View More"}
-        </button>
+        <hr className="my-5" />
+
+        {/* Size Filter */}
+        <div className="mb-6">
+          <div className="flex justify-between items-center cursor-pointer mb-2">
+            <h3 className="text-sm font-semibold">Size</h3>
+            <span className="transform transition-transform duration-300">
+              ▼
+            </span>
+          </div>
+          <h4 className="text-xs font-semibold text-gray-600 mb-2 cursor-pointer">
+            Waist
+          </h4>
+          <div className="grid grid-cols-4 gap-2 text-sm">
+            {visibleWaistSizes.map((size) => (
+              <button
+                key={size}
+                className="bg-gray-100 px-3 py-1 text-gray-700 border border-gray-300 cursor-pointer"
+              >
+                {size}
+              </button>
+            ))}
+          </div>
+
+          {/* Toggle View More / Less */}
+          {allWaistSizes.length > 8 && (
+            <button
+              onClick={() => setShowMoreWaistSizes(!showMoreWaistSizes)}
+              className="text-xs text-gray-600 underline mt-2 cursor-pointer"
+            >
+              {showMoreWaistSizes ? "View Less" : "View More"}
+            </button>
+          )}
+
+          {/* Clothing Size Subsection */}
+          <div className="mt-4">
+            <h4 className="text-xs font-semibold text-gray-600 mb-2 cursor-pointer">
+              Clothing Size
+            </h4>
+            <div className="grid grid-cols-4 gap-2 text-sm ">
+              {visibleClothingSizes.map((size) => (
+                <button
+                  key={size}
+                  className="border border-gray-300 px-3 py-1 text-gray-700 text-sm bg-white cursor-pointer hover:bg-gray-100"
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
+
+            {allClothingSizes.length > 8 && (
+              <button
+                onClick={() => setShowMoreClothingSizes(!showMoreClothingSizes)}
+                className="text-xs text-gray-600 underline mt-2 cursor-pointer"
+              >
+                {showMoreClothingSizes ? "View Less" : "View More"}
+              </button>
+            )}
+          </div>
+        </div>
       </div>
-    </div>
-  )}
-  </div>
 
-<hr className="my-5" />
-
-{/* Size Filter */}
-<div className="mb-6">
-  <div className="flex justify-between items-center cursor-pointer mb-2">
-    <h3 className="text-sm font-semibold">Size</h3>
-    <span className="transform transition-transform duration-300">▼</span>
-  </div>
-  <h4 className="text-xs font-semibold text-gray-600 mb-2">Waist</h4>
-  <div className="grid grid-cols-4 gap-2 text-sm">
-
-  {visibleWaistSizes.map((size) => (
-    <button
-      key={size}
-      className="bg-gray-100 px-3 py-1 text-gray-700 border border-gray-300"
-    >
-      {size}
-    </button>
-  ))}
-</div>
-
-{/* Toggle View More / Less */}
-{allWaistSizes.length > 8 && (
-  <button
-    onClick={() => setShowMoreWaistSizes(!showMoreWaistSizes)}
-    className="text-xs text-gray-600 underline mt-2"
-  >
-    {showMoreWaistSizes ? "View Less" : "View More"}
-  </button>
-)}
-
-
-  {/* Clothing Size Subsection */}
-  <div className="mt-4">
-    <h4 className="text-xs font-semibold text-gray-600 mb-2">Clothing Size</h4>
-    <div className="grid grid-cols-4 gap-2 text-sm">
-    {visibleClothingSizes.map((size) => (
-      <button
-        key={size}
-        className="border border-gray-300 px-3 py-1 text-gray-700 text-sm bg-white hover:bg-gray-100"
-      >
-        {size}
-      </button>
-    ))}
-  </div>
-
-  {allClothingSizes.length > 8 && (
-    <button
-      onClick={() => setShowMoreClothingSizes(!showMoreClothingSizes)}
-      className="text-xs text-gray-600 underline mt-2"
-    >
-      {showMoreClothingSizes ? "View Less" : "View More"}
-    </button>
-  )}
-</div>
-</div>
-</div>
-
-        {/* Add more filter sections here if needed */}
-      
+      {/* Add more filter sections here if needed */}
 
       {/* Right Content: Products Grid */}
       <div className="flex-1">
@@ -292,7 +364,6 @@ const visibleColors = showMoreColors ? allColors : allColors.slice(0, 9);
         <p className="tracking-[0.64px] leading-[24px] text-[16px] font-normal font-maison-neue cursor-pointer hover:underline hover:decoration-blue-400 mb-4">
           Featured
         </p>
-        
 
         {/* Products */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 ">
@@ -304,8 +375,22 @@ const visibleColors = showMoreColors ? allColors : allColors.slice(0, 9);
                   30% off
                 </span>
               </div>
-              <p className="text-[12px] mt-2 hover:underline cursor-pointer">{item.title}</p>
-              <p className="text-[12px] text-gray-500 hover:underline cursor-pointer">{item.title1}</p>
+
+              <div className="mt-2 flex justify-between items-center text-[12px] font-maison-neue">
+                <p className="hover:underline cursor-pointer truncate">
+                  {item.title}
+                </p>
+                <div className="flex items-center space-x-1">
+                  <span className="line-through text-gray-500">
+                    {item.title0}
+                  </span>
+                  <span className="font-semibold">{item.discountedPrice}</span>
+                </div>
+              </div>
+
+              <p className="text-[12px] text-gray-500 hover:underline cursor-pointer">
+                {item.title1}
+              </p>
 
               <div className="flex gap-1 mt-1">
                 <div className="w-4 h-4 rounded-full bg-black border"></div>
@@ -326,32 +411,10 @@ const visibleColors = showMoreColors ? allColors : allColors.slice(0, 9);
                 )}
               </div>
             </div>
-            
           ))}
         </div>
-        </div>
-        </div>
-
-        
-
-        
-      
-      
-
-        
-        
-      
-  
-    
-  
-
-
-
-
-
-
-
-
+      </div>
+    </div>
   );
 };
 

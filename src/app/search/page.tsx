@@ -9,27 +9,22 @@ const items = [
   { src: image17.src, title: "Men's Best Sellers", category: "men" },
 ];
 
-
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
 
-  
-
   const filteredItems = items.filter((item) => {
     const matchesSearch = item.title
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === "all" || item.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+    const matchesCategory =
+      selectedCategory === "all" || item.category === selectedCategory;
+    return matchesSearch && matchesCategory;
   });
-
-  
 
   return (
     <div className="px-4 md:px-10 lg:px-20">
@@ -42,19 +37,24 @@ export default function Search() {
           value={searchTerm}
           onChange={handleSearch}
         />
-        {searchTerm && (
-          <button onClick={() => setSearchTerm("")} 
-          className="text-sm font-light font-maison-neue hover:underline cursor-pointer whitespace-nowrap">
-            Cancel
-          </button>
-        )}
+
+        <button
+          onClick={() => setSearchTerm("")}
+          className={`text-sm font-light font-maison-neue hover:underline cursor-pointer whitespace-nowrap ${
+            searchTerm ? "text-black cursor-default" : "text-gray-400"
+          }`}
+        >
+          Cancel
+        </button>
       </div>
 
       {/* Category buttons */}
       <div className="mt-6 flex gap-4 lg:px-56">
         <button
           className={`text-sm font-maison-neue border px-4 py-1 rounded-full ${
-            selectedCategory === "all" ? "bg-black text-white" : "bg-white text-black"
+            selectedCategory === "all"
+              ? "bg-black text-white"
+              : "bg-white text-black"
           }`}
           onClick={() => setSelectedCategory("all")}
         >
@@ -62,7 +62,9 @@ export default function Search() {
         </button>
         <button
           className={`text-sm font-maison-neue border px-4 py-1 rounded-full ${
-            selectedCategory === "women" ? "bg-black text-white" : "bg-white text-black"
+            selectedCategory === "women"
+              ? "bg-black text-white"
+              : "bg-white text-black"
           }`}
           onClick={() => setSelectedCategory("women")}
         >
@@ -70,7 +72,9 @@ export default function Search() {
         </button>
         <button
           className={`text-sm font-maison-neue border px-4 py-1 rounded-full ${
-            selectedCategory === "men" ? "bg-black text-white" : "bg-white text-black"
+            selectedCategory === "men"
+              ? "bg-black text-white"
+              : "bg-white text-black"
           }`}
           onClick={() => setSelectedCategory("men")}
         >
@@ -78,26 +82,27 @@ export default function Search() {
         </button>
       </div>
 
-
       {searchTerm && (
-      <div className="mt-6">
-        <p className="tracking-wide font-normal text-sm mb-4 lg:px-20">Search Results</p>
-        <ul className="lg:px-20">
-          {filteredItems.length > 0 ? (
-            filteredItems.map((item) => (
-              <li
-                key={item.title}
-                className="mb-2 text-[14px] font-maison-neue underline hover:decoration-blue-400 cursor-pointer"
-              >
-                {item.title}
-              </li>
-            ))
-          ) : (
-            <p className="text-gray-500">No results found.</p>
-          )}
-        </ul>
-      </div>
-    )}
+        <div className="mt-6">
+          <p className="tracking-wide font-normal text-sm mb-4 lg:px-20">
+            Search Results
+          </p>
+          <ul className="lg:px-20">
+            {filteredItems.length > 0 ? (
+              filteredItems.map((item) => (
+                <li
+                  key={item.title}
+                  className="mb-2 text-[14px] font-maison-neue underline hover:decoration-blue-400 cursor-pointer"
+                >
+                  {item.title}
+                </li>
+              ))
+            ) : (
+              <p className="text-gray-500">No results found.</p>
+            )}
+          </ul>
+        </div>
+      )}
 
       <div className="mt-9">
         <hr></hr>

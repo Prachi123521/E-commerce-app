@@ -1,8 +1,6 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Image1, Image2, Image3, picture1 } from "@/assets";
-
 import Collections1 from "../collections1";
 
 const Collections = () => {
@@ -12,67 +10,89 @@ const Collections = () => {
     setList("");
     console.log("Button Click");
   };
+
   return (
     <>
-      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 items-center pl-75 ">
-        <div className=" group relative ">
-          <div className="mt-4 flex gap-5  pt-8 items-center w-33px h-16px cursor-pointer ">
-            <img src={Image1.src} alt="" />
-            <p className="absolute hover:underline flex item-center ml-1 justify-center tracking-[0.2px] text-2xl text-[26px] font-normal display-400 text-white  pl-16 mt-5 mb-14 font-maison-neue">
-              New Arrivals
-            </p>
-            <button
-              className="absolute flex item-center hover:underline cursor-pointer justify-center font-maison-neue font-light pt-2 pb-2 pl-6 pr-6
- bg-white ml-16  mt-13 leading-[16.8px] text-[5px] width={240} height={41}  text-xs text-[11px] font-normal tracking-[1.4px]"
-              value={list}
-              onChange={handleChange}
-            >
-              SHOP THE LATEST
-            </button>
+      {/* Top Three Image Sections */}
+      <div className="mt-15 px-4 sm:px-6 lg:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 1 - New Arrivals */}
+        <div className="relative text-center">
+          <img
+            src={Image1.src}
+            alt="New Arrivals"
+            className="w-full h-auto object-cover"
+          />
+          <p className="absolute tracking-[0.2px] leading-[48px] whitespace-nowrap top-[40%] top-1/5 left-1/2 transform -translate-x-1/2 text-white text-lg sm:text-4xl font-maison-neue font-normal hover:underline">
+            New Arrivals
+          </p>
+          <button
+            onClick={handleChange}
+            className="absolute tracking-[1.4px]  top-1/2 left-1/2 transform -translate-x-1/2 bg-white text-black text-xs sm:text-sm font-maison-neue font-normal px-13 py-2 mt-3 whitespace-nowrap hover:underline"
+          >
+            SHOP THE LATEST
+          </button>
+        </div>
 
-            <img src={Image2.src} alt="" />
-            <p className="absolute flex whitespace-nowrap hover:underline text-white text-2xl text-[30px] tracking-[0.2px] font-normal inset-0 ml-90 display/400 mt-47 font-light">
-              Best-Sellers
-            </p>
-            <button
-              className="absolute flex bg-white hover:underline cursor-pointer text-display/200 text-xs ml-90 whitespace-nowrap w-240px h-41px
-mt-13 font-maison-neue font-normal item-center tracking-[1.4px] leading-[16.8px] text-[10px] font-normal pt-2 pb-2 pl-2 pr-2 "
-            >
-              SHOP YOUR FAVOURITES
-            </button>
+        {/* 2 - Best Sellers */}
+        <div className="relative text-center">
+          <img
+            src={Image2.src}
+            alt="Best Sellers"
+            className="w-full h-auto object-cover"
+          />
+          <p className="absolute tracking-[0.2px] text-[40px] leading-[48px] top-1/4 left-1/2 top-[40%] transform -translate-x-1/2 text-white text-lg sm:text-4xl whitespace-nowrap font-maison-neue font-normal hover:underline">
+            Best-Sellers
+          </p>
+          <button className="absolute tracking-[1.4px] top-1/2 left-1/2 transform -translate-x-1/2 bg-white text-black text-xs sm:text-sm font-maison-neue font-normal whitespace-nowrap px-7 py-2 mt-4 hover:underline">
+            SHOP YOUR FAVOURITES
+          </button>
+        </div>
 
-            <img src={Image3.src} alt="The Holiday Outfit" />
-            <p className="absolute flex ml-159  whitespace-nowrap text-white text-2xl tracking-[0.2px] font-normal text-[25px] mb-12 hover:underline">
-              The Holiday Outfit
-            </p>
-            <button className="flex hover:underline cursor-pointer whitespace-nowrap absolute ml-165 text-center pt-2 pb-2 pl-7 pr-7 text-[10px] tracking-[1.4px] font-normal mt-12 bg-white ">
-              SHOP OCCASSION
-            </button>
-          </div>
+        {/* 3 - Holiday Outfit */}
+        <div className="relative text-center">
+          <img
+            src={Image3.src}
+            alt="The Holiday Outfit"
+            className="w-full h-auto object-cover"
+          />
+          <p className="absolute top-[40%] top-1/4 left-1/2 transform -translate-x-1/2 text-white text-lg sm:text-4xl whitespace-nowrap font-maison-neue hover:underline">
+            The Holiday Outfit
+          </p>
+          <button className="absolute tracking-[1.4px] top-1/2 left-1/2 transform -translate-x-1/2 bg-white text-black text-xs whitespace-nowrap sm:text-sm font-maison-neue font-normal px-16 py-2 mt-2 hover:underline">
+            SHOP OCCASION
+          </button>
         </div>
       </div>
-      <div className="pt-10 pr-40 pl-40 w-1316px h-281px cursor-pointer">
-        <img src={picture1.src} alt="" />
-        <p className=" absolute inset-0 flex mt-483 text-white text-2xl font-maison-neue items-center justify-center hover:underline ">
-          We&apos;re on a Mission To Clean Up the Industry
+
+      {/* Mission Banner */}
+      <div className="relative mt-23 px-4 sm:px-10">
+        <img
+          src={picture1.src}
+          alt="Mission Banner"
+          className="w-full h-auto object-cover"
+        />
+        <p className="absolute top-1/3 left-1/2 transform -translate-x-1/2 text-white text-lg sm:text-2xl font-maison-neue font-semibold text-center hover:underline">
+          We're on a Mission To Clean Up the Industry
         </p>
-        <span className="absolute inset-0 flex mt-492 font-light text-{24} text-white  font-maison-neue items-center justify-center text-sm tracking-[0.64] hover:underline">
-          Read about our progress in our latest Impact Report.{" "}
-        </span>
-        <button className="absolute inset-0 mt-500 bg-white z-[500]  ">
-          Learn More
+        <p className="absolute  top-[44%] top-1/2 left-1/2 transform -translate-x-1/2 text-white text-sm sm:text-base font-maison-neue font-light text-center hover:underline mt-2">
+          Read about our progress in our latest Impact Report.
+        </p>
+        <button className="absolute top-[60%] left-1/2 whitespace-nowrap transform -translate-x-1/2 bg-white text-black font-normal px-16 py-2 text-xs sm:text-sm hover:underline">
+          LEARN MORE
         </button>
       </div>
 
-      <div>
-        <p className="text-center mt-30 text-xl font-maison-neue cursor-pointer hover:underline">
+      {/* Everlane Favorites */}
+      <div className="mt-20 text-center px-4">
+        <p className="text-xl sm:text-2xl font-maison-neue cursor-pointer hover:underline">
           Everlane Favourites
         </p>
-        <p className="text-center mt-3 font-maison-neue text-sm hover:underline cursor-pointer">
-          Beautifully Functional. Purposefully Designed. Consciously Crafted.{" "}
+        <p className="mt-2 text-sm sm:text-base font-maison-neue hover:underline cursor-pointer">
+          Beautifully Functional. Purposefully Designed. Consciously Crafted.
         </p>
       </div>
 
+      {/* Collections Section */}
       <Collections1 />
     </>
   );

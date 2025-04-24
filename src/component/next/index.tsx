@@ -12,63 +12,82 @@ const Next = () => {
     slidesToScroll: 1,
     centerMode: false,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const sliderRef = React.useRef<Slider>(null);
+
   const handleNext = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickNext();
-    }
+    sliderRef.current?.slickNext();
   };
 
   const handlePrev = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
-    }
-    console.log("hello");
+    sliderRef.current?.slickPrev();
   };
 
   return (
-    <>
-      <div className=" absolute inset-0 ml-12 mt-822 ">
-        <button onClick={handlePrev}>
-          <ChevronLeft />
-        </button>
-      </div>
+    <div className="relative w-full py-10">
+      {/* Left Arrow */}
+      <button
+        onClick={handlePrev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md"
+      >
+        <ChevronLeft />
+      </button>
 
-      <div className="px-18">
+      {/* Slider */}
+      <div className="px-4 sm:px-6 lg:px-12">
         <Slider ref={sliderRef} {...settings}>
-          <div className="height={695} width={530}  flex  flex-col  ">
-            <p className="whitespace-nowrap text-right absolute ml-45 mt-83 tracking-[0.64px] cursor-pointer leading-[24px] font-maison-neue text-[16px] font-normal hover:underline">
-              People Are Talking{" "}
-            </p>
-            <img src={star.src} alt="" className="ml-45  absolute mt-98" />
-            <p className=" text-xl text-bottom mt-108 font-maison-neue ml-44 hover:underline cursor-pointer leading-[33.24px] text-[24px] font-normal font-maison-neue">
-              &quot;Love this shirt! Fits perfectly and <br></br>
-              the fabric is thick without<br></br>
-              being stuff.&quot;
-            </p>
-            <p className="ml-45 mt-12 text-sm hover:underline cursor-pointer tracking-[2]">
-              -- JonSnSF ,{" "}
-              <span className="border-b-2 border-black hover:border-blue-400">
-                The HeavyWeight OverShirt
-              </span>
-            </p>
+          {/* Text Slide */}
+          <div className="flex flex-col justify-center px-6 sm:px-40  mt-44  py-6">
+            <div className="mt-45 sm:mt-16">
+              <p className="text-sm sm:text-base text-right sm:text-left font-maison-neue tracking-wide mb-4 hover:underline">
+                People Are Talking
+              </p>
+              <img src={star.src} alt="star" className="mb-4 w-6 sm:w-8" />
+              <p className="text-base sm:text-xl font-maison-neue mb-4 leading-snug hover:underline cursor-pointer">
+                &quot;Love this shirt! Fits perfectly and{" "}
+                <br className="hidden sm:block" />
+                the fabric is thick without <br className="hidden sm:block" />
+                being stuff.&quot;
+              </p>
+              <p className="text-xs sm:text-sm mt-2 hover:underline cursor-pointer">
+                -- JonSnSF,{" "}
+                <span className="border-b-2 border-black hover:border-blue-400">
+                  The HeavyWeight OverShirt
+                </span>
+              </p>
+            </div>
           </div>
 
-          <div className="height={695} width={1400}  flex  flex-col  ">
-            <img src={image11.src} alt="" className="mt-25 mb-12" />
+          {/* Image Slide */}
+          <div className="flex justify-center items-center px-4 sm:px-12 py-6">
+            <img
+              src={image11.src}
+              alt="testimonial"
+              className="w-full max-w-[500px] h-auto object-contain"
+            />
           </div>
         </Slider>
       </div>
 
-      <div className="absolute inset-0 mt-822 ml-350">
-        <button onClick={handleNext}>
-          <ChevronRight />
-        </button>
-      </div>
-      <hr className="mt-28 ml-50 mr-50  border-black "></hr>
-    </>
+      {/* Right Arrow */}
+      <button
+        onClick={handleNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md"
+      >
+        <ChevronRight />
+      </button>
+
+      <hr className="mt-16 mx-6 sm:mx-20 border-black" />
+    </div>
   );
 };
 

@@ -196,7 +196,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
     <>
       {isGlossy ? (
         //  Glossy Award Page Layout
-        <div className="p-12">
+        <div className="px-4 sm:px-6 md:px-12 lg:px-20">
           <h1 className="text-[40px] font-bold font-maison-neue text-center mb-8">
             We Won a Glossy Award{" "}
           </h1>
@@ -235,10 +235,10 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
           </div>
 
           <div className="w-[1400px] mx-auto mt-12">
-            <p className="ml-60 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
               Celebrating a Milestone
             </p>
-            <p className="mt-8 ml-60 leading-[33.24px] text-[24px] font-normal font-maison-neue w-[944px]">
+            <p className="mt-8 ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue w-full max-w-[944px]">
               We&apos;re thrilled to announce that we&apos;ve been honored with
               a <span className="underline text-solid">Glossy Award</span> for
               our commitment to innovation in fashion and sustainability. This
@@ -246,10 +246,10 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               puts into every detail — from design to customer experience.
             </p>
 
-            <p className="leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline  cursor-pointer mt-12 ml-60">
+            <p className="leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline  cursor-pointer mt-12 ml-6 sm:ml-10 md:ml-20 lg:ml-60">
               Behind the Brand
             </p>
-            <p className="ml-60 mt-10 leading-[33.24px] text-[24px] font-normal font-maison-neue w-[944px]">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-10 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue w-full max-w-[944px]">
               What sets us apart? It&apos;s our{" "}
               <span className="underline text-solid">
                 community-first mindset
@@ -259,10 +259,10 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               minimize impact without compromising on quality or design.
             </p>
 
-            <p className="ml-60 mt-12 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-12 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
               What&apos;s Next?
             </p>
-            <p className="mt-12 ml-60 leading-[33.24px] text-[24px] font-normal font-maison-neue w-[944px]">
+            <p className="mt-12 ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue w-full max-w-[944px]">
               While this award means the world to us, it&apos;s just the
               beginning. We&apos;re doubling down on our mission to create
               meaningful pieces that you love to wear — and feel good about
@@ -279,15 +279,15 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               alt="Glossy Award"
               width={800}
               height={500}
-              className="rounded-lg"
+              className="w-full max-w-[800px] h-auto object-cover mb-[55px]"
             />
           </div>
 
           <div>
-            <p className="mt-28 ml-63 leading-[48px] text-[30px] font-semibold font-maison-neue hover:underline cursor-pointer">
+            <p className="mt-28 ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[48px] text-[30px] font-semibold font-maison-neue hover:underline cursor-pointer">
               Honoring the Team Behind the Vision
             </p>
-            <p className="ml-63 mt-12 leading-[33.24px] text-[24px] font-normal font-maison-neue">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-12 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue">
               Our success wouldn&apos;t be possible without the incredible
               minds, hands, and hearts behind<br></br> our brand. Every piece we
               design, every shoot we plan, every customer interaction — it all
@@ -296,10 +296,10 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               individuals who breathe life into everything we do.
             </p>
 
-            <p className="ml-63 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
               Building a More Thoughtful Future
             </p>
-            <p className="ml-63 mt-15 leading-[33.24px] text-[24px] font-normal font-maison-neue">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-15 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue">
               At the core of our mission is responsibility — to the planet, to
               our customers, and to<br></br> future generations. From using more
               sustainable materials to implementing ethical<br></br> production
@@ -309,7 +309,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               decision at a time.
             </p>
 
-            <p className="ml-63 mt-5 leading-[33.24px] text-[24px] font-normal font-maison-neue mb-19">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-5 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue mb-19">
               Thank you for being a part of this journey.{" "}
               <span className="underline text-solid">
                 Together, we&apos;re redefining what fashion can be.
@@ -335,10 +335,10 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
           </p>
 
           <div className="w-[1400px] mx-auto mt-20">
-            <p className="ml-60 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
               Your Style, Your Rules
             </p>
-            <p className="mt-8 ml-60 leading-[33.24px] text-[24px] font-normal font-maison-neue w-[944px]">
+            <p className="mt-8 ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue w-full max-w-[944px]">
               Our Coordinate Your Style campaign encourages you to build a
               wardrobe with intention — think layering core pieces, adding pops
               of contrast, and never underestimating the power of accessories.
@@ -346,7 +346,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               weekend, style is what you make of it.
             </p>
 
-            <p className="ml-60 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
               Featured Favorites
             </p>
             <div className="flex space-x-8 mt-15 ml-32">
@@ -363,7 +363,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               ))}
             </div>
 
-            <p className="text-center mt-16 leading-[33.24px] text-[24px] font-normal font-maison-neue mb-12">
+            <p className="text-center mt-16 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue mb-12">
               Style isn&apos;t just about what you wear — it&apos;s how you wear
               it.
               <br></br>{" "}
@@ -397,20 +397,20 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
           </p>
 
           <div className="w-[1400px] mx-auto mt-20">
-            <p className="ml-60 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
               Shop With Purpose
             </p>
-            <p className="mt-8 ml-60 leading-[33.24px] text-[24px] font-normal font-maison-neue w-[944px]">
+            <p className="mt-8 ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue w-full max-w-[944px]">
               Our Black Friday Fund is our way of giving back while you shop.
               This year, we&apos;re partnering with local and global initiatives
               to provide resources, mentorship, and opportunities to underserved
               communities.
             </p>
 
-            <p className="ml-60 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
               Where Your Dollars Go
             </p>
-            <p className="ml-60 mt-10 leading-[33.24px] text-[24px] font-normal font-maison-neue w-[944px]">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-10 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue w-full max-w-[944px]">
               For every order placed during our Black Friday weekend, we&apos;re
               donating a percentage of proceeds to
               <span className="underline text-solid">
@@ -420,10 +420,10 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               . It&apos;s fashion that feels good — and does good.
             </p>
 
-            <p className="ml-60 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline cursor-pointer">
               Join the Movement
             </p>
-            <p className="ml-60 mt-10 leading-[33.24px] text-[24px] font-normal font-maison-neue w-[944px]">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-10 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue w-full max-w-[944px]">
               Whether you&apos;re treating yourself or gifting someone else,
               your support fuels progress. Let&apos;s make this Black Friday
               more meaningful — together.
@@ -440,7 +440,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
             />
           </div>
 
-          <p className="text-center mt-16 leading-[33.24px] text-[24px] font-normal font-maison-neue mb-12">
+          <p className="text-center mt-16 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue mb-12">
             Thank you for shopping with purpose.{" "}
             <span className="underline text-solid">
               Learn more about our impact here.
@@ -484,10 +484,10 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
             className="mt-20 pl-60 ml-15 w-[1216] h-[1054]"
           />
           <div className="w-[1400] h-[1131]">
-            <p className="ml-60 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400  cursor-pointer">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400  cursor-pointer">
               Nail the Classics
             </p>
-            <p className="mt-8 ml-60 leading-[33.24px] text-[24px] font-normal font-maison-neue  w-[944] h-[200]">
+            <p className="mt-8 ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue  w-full max-w-[944px] h-[200]">
               Do pure winter chic with a
               <span className="underline text-solid hover:bg-blue-200 cursor-pointer">
                 {" "}
@@ -515,7 +515,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
             <p className="leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer mt-12 ml-60">
               Monochromatic Magic
             </p>
-            <p className="ml-60 mt-10 leading-[33.24px] text-[24px] font-normal w-[944] h-[200]">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-10 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal w-full max-w-[944px] h-[200]">
               Nothing feels more luxe than an all-white winter outfit. And the
               best part? You don&apos;t
               <br /> have to break the bank to create a super chic top-to-toe
@@ -539,10 +539,10 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               letting your outfit take center stage.
             </p>
 
-            <p className="ml-60 mt-12 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-12 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer">
               Keep Warm in White
             </p>
-            <p className="mt-12 ml-60 leading-[33.24px] text-[24px] font-normal  w-[944] h-[167]">
+            <p className="mt-12 ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal w-full max-w-[944px] h-[167]">
               Stay warm all winter long with a
               <span className="underline text-solid hover:bg-blue-200 cursor-pointer">
                 {" "}
@@ -565,10 +565,10 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
             className="ml-78 h-[1054] w-[790] pl-34"
           />
           <div>
-            <p className="mt-28 ml-63 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer">
+            <p className="mt-28 ml-6 sm:ml-10 md:ml-20 lg:ml-60 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer">
               Textures and Layers
             </p>
-            <p className="ml-63 mt-12 leading-[33.24px] text-[24px] font-normal font-maison-neue">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-12 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue">
               Winter fashion is all about layering, and white outfits provide
               the perfect base for
               <br /> playing with textures and layers. Start with your
@@ -590,10 +590,10 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               creates a textural look that&apos;s both cozy and chic.
             </p>
 
-            <p className="ml-63 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer ">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-15 leading-[48px] text-[40px] font-semibold font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer ">
               Accessorize with Neutrals
             </p>
-            <p className="ml-63 mt-15 leading-[33.24px] text-[24px] font-normal font-maison-neue">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-15 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue">
               When working with a predominantley white palette, neutrals become
               your best friends.
               <br />
@@ -610,7 +610,7 @@ const BlogDetail = ({ params }: { params: Promise<{ slug: string }> }) => {
               those finishing outfit tonal touches.
             </p>
 
-            <p className="ml-63 mt-5 leading-[33.24px] text-[24px] font-normal font-maison-neue">
+            <p className="ml-6 sm:ml-10 md:ml-20 lg:ml-60 mt-5 leading-[33.24px] text-[18px] sm:text-[20px] md:text-[24px] font-normal font-maison-neue">
               {" "}
               So, step into the season with confidence, and let your winter
               whites make a bold and <br />

@@ -19,10 +19,14 @@ const data = [
 
 const About = () => {
   return (
-    <div className="px-4 md:px-12">
+    <div className="px-4 sm:px-8 md:px-12">
       <div className="text-center mt-12">
-        <img src={section1.src} alt="" className="mx-auto mb-8" />
-        <p className="font-normal mt-15  tracking-wide text-[20px] md:text-[28px] lg:text-[38px] leading-relaxed font-maison-neue ">
+        <img
+          src={section1.src}
+          alt=""
+          className="mx-auto mb-8  max-w-full h-auto"
+        />
+        <p className="font-normal mt-15  tracking-wide text-[18px] sm:text-[22px]  md:text-[28px] lg:text-[38px] leading-relaxed font-maison-neue ">
           At Everlane, we want the right choice to be as easy <br></br>as
           putting on a great T-shirt. That&apos;s why we partner<br></br> with
           the best, ethical factories around the world.<br></br> Source only the
@@ -37,16 +41,16 @@ const About = () => {
         <img
           src={image18.src}
           alt=""
-          className="w-full lg:w-1/2 object-cover "
+          className="w-full lg:w-1/2 h-auto object-cover "
         />
         <div className="bg-neutral-200 p-6 lg:p-10 w-full lg:w-1/2  flex flex-col justify-center">
-          <p className=" whitespace-nowrap  font-maison-neue font-semibold hover:underline cursor-pointer tracking-wide text-xs">
+          <p className="text-xs  font-maison-neue font-maison-neue font-semibold hover:underline cursor-pointer tracking-wide">
             OUR FACTORIES
           </p>
-          <p className="text-[28px] lg:text-[40px] mb-4 whitespace-nowrap hover:underline cursor-pointer font-normal font-maison-neue">
+          <p className="text-[20px]  sm:text-[28px] lg:text-[40px] mb-4 whitespace-nowrap hover:underline cursor-pointer font-normal font-maison-neue">
             Our ethical approach.
           </p>
-          <p className="text-sm tracking-wide font-normal font-maison-neue whitespace-nowrap ">
+          <p className="text-sm tracking-wide font-normal sm:text-base md:text-base lg:text-lg font-maison-neue ">
             We spend months finding the best factories around the world-the same
             <br></br>ones that produce your favourite designer labels. We visit
             them often and<br></br> build strong personal relationships with the
@@ -58,7 +62,11 @@ const About = () => {
       </div>
 
       <div className="my-12">
-        <img src={image19.src} alt="" className="w-full" />
+        <img
+          src={image19.src}
+          alt=""
+          className="w-full h-auto object-cover max-w-full"
+        />
       </div>
 
       <div className="flex flex-col lg:flex-row items-stretch mt-16">
@@ -108,7 +116,7 @@ const About = () => {
       <p className="mt-20 text-center text-[24px] lg:text-[32px] font-maison-neue font-normal hover:underline hover:decoration-blue-400 cursor-pointer">
         More to Explore
       </p>
-      <div className="mt-8 flex flex-col sm:flex-row gap-6 justify-center">
+      <div className="mt-8 flex flex-col sm:flex-row gap-6 flex-wrap justify-center">
         {data.map((data) => (
           <div key={data.title} className="text-center">
             <img

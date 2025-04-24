@@ -7,46 +7,76 @@ import Next from "../next";
 
 const Collections1 = () => {
   return (
-    <>
+    <div className="w-full">
+      {/* Sliders */}
       <Slider2 />
-
       <Next />
 
-      <p className="absolute inset-0 mt-979 text-lg font-maison-neue mr-140 hover:underline cursor-pointer text-center ml-42">
-        Our Holiday Gift Picks{" "}
-      </p>
-      <p className="absolute inset-0 mt-979 ml-223 text-lg font-maison-neue hover:underline cursor-pointer ">
-        Cleaner Fashion
-      </p>
+      {/* Gift Picks Images with Overlay Text */}
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-6 mt-12 px-4 sm:px-8 lg:px-28">
+        {/* Image 1 */}
+        <div className="relative w-full max-w-sm">
+          <img
+            src={image12.src}
+            alt="Gift 1"
+            className="w-full h-auto object-cover "
+          />
+          <p className="absolute top-[-36] left-1/2 transform -translate-x-1/2 text-sm sm:text-base font-maison-neue bg-white/80 px-3 py-1 rounded hover:underline cursor-pointer">
+            Our Holiday Gift Picks
+          </p>
 
-      <div className="w-[505px] h-[626px] pt-34 ml-89 mb-12 flex space-x-4 ">
-        <img src={image12.src} alt="" />
-        <img src={image13.src} alt="" />
-        <p className="absolute ml-107 whitspace-nowrap mt-126 font-normal cursor-pointer hover:underline tracking-[1px] font-maison-neue text-xs text-[12px]  ">
-          See the sustainability efforts behind each of our products.
-        </p>
-        <p className="absolute ml-145 mt-137  text-sm cursor-pointer hover:underline underline  tracking-[1.4px] leading-[20px] font-bold text-[10px] font-normal font-maison-neue ">
-          Learn More
-        </p>
+          <p className="text-xs sm:text-sm font-maison-neue tracking-wide hover:underline text-center">
+            The best presents for everyone on your list.
+          </p>
+          <p className="text-sm text-center underline cursor-pointer hover:text-blue-500 mt-1">
+            Read More
+          </p>
+        </div>
+
+        {/* Image 2 */}
+        <div className="relative w-full max-w-sm">
+          <img
+            src={image13.src}
+            alt="Gift 2"
+            className="w-full h-auto object-cover"
+          />
+          <p className="absolute top-[-36] left-1/2 transform -translate-x-1/2 text-sm sm:text-base font-maison-neue bg-white/80 px-3 py-1 rounded hover:underline cursor-pointer">
+            Cleaner Fashion
+          </p>
+          <p className="text-xs sm:text-sm font-maison-neue tracking-wide hover:underline text-center">
+            See the sustainability efforts behind each of our products.
+          </p>
+          <p className="text-sm  underline cursor-pointer hover:text-blue-500 mt-1 text-center">
+            Learn More
+          </p>
+        </div>
       </div>
-      <p className="ml-104 absolute inset-0 mt-1115 whitespace-nowrap cursor-pointer tracking-[1.4px] leading-[16.8px] font-normal font-[400] hover:underline text-[12px]  ml-80 ">
-        The best presents for everyone on your list.
-      </p>
-      <p className="ml-135 font-maison-neue cursor-pointer underline cursor-pointer  mt-15 tracking-[1.4px] leading-[20px] text-[10px] font-bold font-normal text-sm ">
-        {" "}
-        Read More
-      </p>
 
-      <hr className="mt-25 ml-50 mr-50 border-black"></hr>
+      {/* Horizontal Rule */}
+      <hr className="mt-10 mx-6 sm:mx-20 border-black" />
 
+      {/* Everlane Section */}
       <Everlane />
 
-      <div className="flex space-x-4 pl-28 mb-32 mt-25 ml-10">
-        <img src={frame1.src} alt="" />
-        <img src={frame2.src} alt="" />
-        <img src={frame3.src} alt="" />
+      {/* Bottom Frames */}
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-10 px-4 sm:px-8 lg:px-28 mb-16">
+        <img
+          src={frame1.src}
+          alt="Frame 1"
+          className="w-full sm:w-auto max-w-xs"
+        />
+        <img
+          src={frame2.src}
+          alt="Frame 2"
+          className="w-full sm:w-auto max-w-xs"
+        />
+        <img
+          src={frame3.src}
+          alt="Frame 3"
+          className="w-full sm:w-auto max-w-xs"
+        />
       </div>
-    </>
+    </div>
   );
 };
 

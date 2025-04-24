@@ -11,6 +11,15 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
+import HolidayGifting from "@/app/holiday-gifting/page";
+import NewArrivals from "@/app/new-arrival/page";
+import Clothing from "@/app/clothing/page";
+import TopsAndSweaters from "@/app/tops-sweaters/page";
+import PantsAndJeans from "@/app/pants-jeans/page";
+import Outerwear from "@/app/outerwear/page";
+import ShoesAndBags from "@/app/shoes-bags/page";
+import Sale from "@/app/sale/page";
+import BestSellers from "@/app/best-seller/page";
 
 const dropdownData = {
   holiday: [
@@ -243,7 +252,7 @@ const Header1 = () => {
             onMouseEnter={() => setIsHolidayOpen(true)}
             onMouseLeave={() => setIsHolidayOpen(false)}
           >
-            <Link href="#" className="hover:underline">
+            <Link href="#" className="hover:underline hover:text-red-400">
               Holiday Gifting{" "}
             </Link>
             <AnimatePresence>
@@ -253,37 +262,9 @@ const Header1 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0 right-0 top-full w-[1280px] bg-white rounded-md shadow-lg z-50 py-6 px-4 "
+                  className="fixed left-0 top-[140px] w-full bg-white z-50 shadow-lg "
                 >
-                  <div className="grid grid-cols-3 gap-8">
-                    {dropdownData.holiday.map((section) => (
-                      <div
-                        key={section.title}
-                        className={`p-4 rounded-md ${
-                          section.title.includes("Her")
-                            ? "bg-pink-100"
-                            : section.title.includes("Him")
-                            ? "bg-blue-100"
-                            : "bg-emerald-100"
-                        }`}
-                      >
-                        <h3 className="font-semibold text-sm mb-2">
-                          {section.title}
-                        </h3>
-                        <div className="flex flex-col gap-1">
-                          {section.items.map((item) => (
-                            <Link
-                              key={`${section.title}-${item}`}
-                              href="#"
-                              className="text-sm text-black hover:underline"
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <HolidayGifting />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -295,7 +276,7 @@ const Header1 = () => {
             onMouseEnter={() => setIsNewArrivalsOpen(true)}
             onMouseLeave={() => setIsNewArrivalsOpen(false)}
           >
-            <Link href="#" className="hover:underline ">
+            <Link href="#" className="hover:underline hover:text-red-400">
               {" "}
               New Arrivals {/*<IoIosArrowDown/>*/}
             </Link>
@@ -306,35 +287,9 @@ const Header1 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0 w-66 bg-white rounded-md shadow-lg z-50 py-2"
+                  className="fixed left-0 top-[140px] w-full bg-white z-50 shadow-lg"
                 >
-                  <div className="grid grid-cols-2 gap-x-6 px-4 pt-4">
-                    {dropdownData.newArrivals.map((section) => (
-                      <div
-                        key={section.title}
-                        className={`p-4 rounded-md  ${
-                          section.title === "Women"
-                            ? "bg-pink-100"
-                            : "bg-blue-100"
-                        }`}
-                      >
-                        <h3 className="font-semibold text-sm mb-1">
-                          {section.title}
-                        </h3>
-                        <div className="flex flex-col gap-1">
-                          {section.items.map((item) => (
-                            <Link
-                              key={`${section.title}-${item}`}
-                              href="#"
-                              className="text-sm hover:underline   text-black"
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <NewArrivals />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -346,7 +301,7 @@ const Header1 = () => {
             onMouseEnter={() => setIsBestSellersOpen(true)}
             onMouseLeave={() => setIsBestSellersOpen(false)}
           >
-            <Link href="#" className="hover:underline">
+            <Link href="#" className="hover:underline hover:text-red-400">
               Best-Sellers{" "}
             </Link>
             <AnimatePresence>
@@ -356,35 +311,9 @@ const Header1 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0 w-90 bg-white rounded-md shadow-lg z-50 py-4 px-6"
+                  className="fixed left-0 top-[140px] w-full bg-white z-50 shadow-lg"
                 >
-                  <div className="grid grid-cols-2 gap-4">
-                    {dropdownData.bestSellers.map((section) => (
-                      <div
-                        key={section.title}
-                        className={`p-4 rounded-md ${
-                          section.title === "Top Picks"
-                            ? "bg-yellow-100"
-                            : "bg-green-100"
-                        }`}
-                      >
-                        <h3 className="font-semibold text-sm mb-2 whitespace-nowrap">
-                          {section.title}
-                        </h3>
-                        <div className="flex flex-col gap-1">
-                          {section.items.map((item) => (
-                            <Link
-                              key={`${section.title}-${item}`}
-                              href="#"
-                              className="text-sm text-black hover:underline "
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <BestSellers />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -396,7 +325,7 @@ const Header1 = () => {
             onMouseEnter={() => setIsClothingOpen(true)}
             onMouseLeave={() => setIsClothingOpen(false)}
           >
-            <Link href="#" className="hover:underline">
+            <Link href="#" className="hover:underline hover:text-red-400">
               Clothing{" "}
             </Link>
             <AnimatePresence>
@@ -406,35 +335,9 @@ const Header1 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0 w-90 bg-white rounded-md shadow-lg z-50 py-4 px-6"
+                  className="fixed left-0 top-[140px] w-full bg-white z-50 shadow-lg"
                 >
-                  <div className="grid grid-cols-2 gap-4">
-                    {dropdownData.clothing.map((section, index) => (
-                      <div
-                        key={index}
-                        className={`p-4 rounded-md ${
-                          section.title === "Women"
-                            ? "bg-blue-100"
-                            : "bg-green-100"
-                        }`}
-                      >
-                        <h3 className="font-semibold text-sm mb-2 whitespace-nowrap">
-                          {section.title}
-                        </h3>
-                        <div className="flex flex-col gap-1">
-                          {section.items.map((item) => (
-                            <Link
-                              key={`${section.title}-${item}`}
-                              href="#"
-                              className="text-sm text-black hover:underline "
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <Clothing />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -446,7 +349,7 @@ const Header1 = () => {
             onMouseEnter={() => setIsTopsOpen(true)}
             onMouseLeave={() => setIsTopsOpen(false)}
           >
-            <Link href="#" className="hover:underline">
+            <Link href="#" className="hover:underline hover:text-red-400">
               Tops & Sweaters
             </Link>
             <AnimatePresence>
@@ -456,35 +359,9 @@ const Header1 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0  w-90 bg-white rounded-md shadow-lg z-50 px-4 py-6"
+                  className="fixed left-0 top-[140px] w-full bg-white z-50 shadow-lg"
                 >
-                  <div className=" mx-auto max-w-7xl grid grid-cols-2 gap-4">
-                    {dropdownData.topsAndSweaters.map((section) => (
-                      <div
-                        key={section.title}
-                        className={`p-4 rounded-md ${
-                          section.title === "Women"
-                            ? "bg-pink-50"
-                            : "bg-blue-50"
-                        }`}
-                      >
-                        <h3 className="font-semibold text-sm mb-2">
-                          {section.title}
-                        </h3>
-                        <div className="flex flex-col gap-1">
-                          {section.items.map((item) => (
-                            <Link
-                              key={`${section.title}-${item}`}
-                              href="#"
-                              className="text-sm text-black hover:underline"
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <TopsAndSweaters />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -496,7 +373,7 @@ const Header1 = () => {
             onMouseEnter={() => setIsPantsOpen(true)}
             onMouseLeave={() => setIsPantsOpen(false)}
           >
-            <Link href="#" className="hover:underline">
+            <Link href="#" className="hover:underline hover:text-red-400">
               Pants & Jeans
             </Link>
             <AnimatePresence>
@@ -506,35 +383,9 @@ const Header1 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0 w-90 bg-white rounded-md shadow-lg z-50 py-4 px-6"
+                  className="fixed left-0 top-[140px] w-full bg-white z-50 shadow-lg"
                 >
-                  <div className="grid grid-cols-2 gap-4">
-                    {dropdownData.pantsAndJeans.map((section) => (
-                      <div
-                        key={section.title}
-                        className={`p-4 rounded-md ${
-                          section.title === "Women"
-                            ? "bg-pink-50"
-                            : "bg-blue-50"
-                        }`}
-                      >
-                        <h3 className="font-semibold text-sm mb-2">
-                          {section.title}
-                        </h3>
-                        <div className="flex flex-col gap-1">
-                          {section.items.map((item) => (
-                            <Link
-                              key={`${section.title}-${item}`}
-                              href="#"
-                              className="text-sm text-black hover:underline"
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <PantsAndJeans />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -546,7 +397,7 @@ const Header1 = () => {
             onMouseEnter={() => setIsOuterwearOpen(true)}
             onMouseLeave={() => setIsOuterwearOpen(false)}
           >
-            <Link href="#" className="hover:underline">
+            <Link href="#" className="hover:underline hover:text-red-400">
               Outerwear{" "}
             </Link>
             <AnimatePresence>
@@ -556,37 +407,9 @@ const Header1 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0 w-90 bg-white rounded-md shadow-lg z-50 py-4 px-6"
+                  className="fixed left-0 top-[140px] w-full bg-white z-50 shadow-lg"
                 >
-                  <div className="grid grid-cols-2 gap-4">
-                    {dropdownData.outerwear.map((section) => (
-                      <div
-                        key={section.title}
-                        className={`p-4 rounded-md ${
-                          section.title === "By Type"
-                            ? "bg-pink-100"
-                            : section.title === "By Material"
-                            ? "bg-blue-100"
-                            : "bg-yellow-100"
-                        }`}
-                      >
-                        <h3 className="font-semibold text-sm mb-2">
-                          {section.title}
-                        </h3>
-                        <div className="flex flex-col gap-1">
-                          {section.items.map((item) => (
-                            <Link
-                              key={`${section.title}-${item}`}
-                              href="#"
-                              className="text-sm text-black hover:underline"
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <Outerwear />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -598,7 +421,7 @@ const Header1 = () => {
             onMouseEnter={() => setIsShoesBagsOpen(true)}
             onMouseLeave={() => setIsShoesBagsOpen(false)}
           >
-            <Link href="#" className="hover:underline">
+            <Link href="#" className="hover:underline hover:text-red-400">
               Shoes & Bags{" "}
             </Link>
             <AnimatePresence>
@@ -608,35 +431,9 @@ const Header1 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0 w-90 bg-white rounded-md shadow-lg z-50 py-4 px-6"
+                  className="fixed left-0 top-[140px] w-full bg-white z-50 shadow-lg"
                 >
-                  <div className="grid grid-cols-2 gap-4">
-                    {dropdownData.shoesAndBags.map((section) => (
-                      <div
-                        key={section.title}
-                        className={`p-4 rounded-md ${
-                          section.title === "Shoes"
-                            ? "bg-stone-100"
-                            : "bg-amber-100"
-                        }`}
-                      >
-                        <h3 className="font-semibold text-sm mb-2">
-                          {section.title}
-                        </h3>
-                        <div className="flex flex-col gap-1">
-                          {section.items.map((item) => (
-                            <Link
-                              key={`${section.title}-${item}`}
-                              href="#"
-                              className="text-sm text-black hover:underline"
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <ShoesAndBags />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -649,7 +446,7 @@ const Header1 = () => {
             onMouseEnter={() => setIsSaleOpen(true)}
             onMouseLeave={() => setIsSaleOpen(false)}
           >
-            <Link href="#" className="text-red-700 hover:underline">
+            <Link href="#" className="hover:underline hover:text-red-400">
               Sale
             </Link>
             <AnimatePresence>
@@ -659,37 +456,9 @@ const Header1 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0 w-90 bg-white rounded-md shadow-lg z-50 py-4 px-6"
+                  className="fixed left-0 top-[140px] w-full bg-white z-50 shadow-lg"
                 >
-                  <div className="grid grid-cols-3 gap-4">
-                    {dropdownData.sale.map((section) => (
-                      <div
-                        key={section.title}
-                        className={`p-4 rounded-md ${
-                          section.title === "Women"
-                            ? "bg-red-100"
-                            : section.title === "Men"
-                            ? "bg-orange-100"
-                            : "bg-yellow-100"
-                        }`}
-                      >
-                        <h3 className="font-semibold text-sm mb-2">
-                          {section.title}
-                        </h3>
-                        <div className="flex flex-col gap-1">
-                          {section.items.map((item) => (
-                            <Link
-                              key={`${section.title}-${item}`}
-                              href="#"
-                              className="text-sm text-black hover:underline"
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <Sale />
                 </motion.div>
               )}
             </AnimatePresence>
