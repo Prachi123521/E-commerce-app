@@ -12,7 +12,7 @@ const Clothing = () => {
           {/* Women’s Clothing */}
           <div>
             <h1 className="font-maison-neue text-[10px] font-semibold text-gray-500 tracking-[0.6px] leading-[16px] hover:underline cursor-pointer">
-              WOMEN'S CLOTHING
+              WOMEN&apos;S CLOTHING
             </h1>
             <ul className="mt-5 space-y-4">
               {[
@@ -37,7 +37,7 @@ const Clothing = () => {
           {/* Men’s Clothing */}
           <div>
             <h1 className="font-maison-neue text-[10px] font-semibold text-gray-500 tracking-[0.6px] leading-[16px] hover:underline cursor-pointer">
-              MEN'S CLOTHING
+              MEN&apos;S CLOTHING
             </h1>
             <ul className="mt-5 space-y-4">
               {[

@@ -48,7 +48,7 @@ const Next = () => {
           {/* Text Slide */}
           <div className="flex flex-col justify-center px-6 sm:px-40  mt-44  py-6">
             <div className="mt-45 sm:mt-16">
-              <p className="text-sm sm:text-base text-right sm:text-left font-maison-neue tracking-wide mb-4 hover:underline">
+              <p className="text-sm sm:text-base cursor-pointer text-right sm:text-left font-maison-neue tracking-wide mb-4 hover:underline">
                 People Are Talking
               </p>
               <img src={star.src} alt="star" className="mb-4 w-6 sm:w-8" />

@@ -11,7 +11,7 @@ const TopsAndSweaters = () => {
           {/* Women's Tops & Sweaters */}
           <div>
             <h1 className="font-maison-neue text-[10px] font-semibold text-gray-500 tracking-[0.6px] leading-[16px] hover:underline cursor-pointer">
-              WOMEN'S TOPS & SWEATERS
+              WOMEN&apos;S TOPS & SWEATERS
             </h1>
             <ul className="mt-5 space-y-4">
               {[
@@ -36,7 +36,7 @@ const TopsAndSweaters = () => {
           {/* Men's Tops & Sweaters */}
           <div>
             <h1 className="font-maison-neue text-[10px] font-semibold text-gray-500 tracking-[0.6px] leading-[16px] hover:underline cursor-pointer">
-              MEN'S TOPS & SWEATERS
+              MEN&apos;S TOPS & SWEATERS
             </h1>
             <ul className="mt-5 space-y-4">
               {[

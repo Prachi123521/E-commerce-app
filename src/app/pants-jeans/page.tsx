@@ -12,7 +12,7 @@ const PantsAndJeans = () => {
           {/* Women's Pants & Jeans */}
           <div>
             <h1 className="font-maison-neue text-[10px] font-semibold text-gray-500 tracking-[0.6px] leading-[16px] hover:underline cursor-pointer">
-              WOMEN'S PANTS & JEANS
+              WOMEN&apos;S PANTS & JEANS
             </h1>
             <ul className="mt-5 space-y-4">
               {[
@@ -38,7 +38,7 @@ const PantsAndJeans = () => {
           {/* Men's Pants & Jeans */}
           <div>
             <h1 className="font-maison-neue text-[10px] font-semibold text-gray-500 tracking-[0.6px] leading-[16px] hover:underline cursor-pointer">
-              MEN'S PANTS & JEANS
+              MEN&apos;S PANTS & JEANS
             </h1>
             <ul className="mt-5 space-y-4">
               {[

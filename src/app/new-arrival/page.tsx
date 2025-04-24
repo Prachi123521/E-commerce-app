@@ -10,7 +10,7 @@ const NewArrivals = () => {
           {/* What's New Section */}
           <div>
             <h1 className="font-maison-neue text-[10px] font-semibold text-gray-500 tracking-[0.6px] leading-[16px] hover:underline cursor-pointer">
-              WHAT'S NEW
+              WHAT&apos;S NEW
             </h1>
             <ul className="mt-5 space-y-4">
               {[
