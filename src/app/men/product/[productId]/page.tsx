@@ -1,25 +1,8 @@
 
-
-{/*export default async function ProductDetails({
-    params,
-}:{
-    params:Promise<{productId:string}>;
-
-}) {
-    const ProductId = (await params).productId;
-    return(
-    <h1>Hello {ProductId}</h1>
-    )
-}
-*/}
-
-
-// app/men/[productId]/page.tsx
 import { Metadata } from "next";
 import Product from "../page";
 import { FC } from "react";
 
-// app/men/page.tsx
 
 
 
@@ -37,17 +20,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function ProductPage({ params }:PageProps) {
+{/*export default function ProductPage:FC<PageProps>=({ params })=> {
   const { productId } = params;
 
   return <Product productId={productId} />;
-}
-
-
-
-{/*export default function ProductPage({ params }: { params: { productId: string } }) {
-  return <Product productId={params.productId} />;
 }*/}
+
+const ProductPage: FC<PageProps> = ({ params }) => {
+  const { productId } = params;
+  return <Product productId={productId} />;
+};
+
+export default ProductPage;
+
+
 
 
 
