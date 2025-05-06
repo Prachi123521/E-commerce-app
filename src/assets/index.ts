@@ -1,0 +1,296 @@
+import homeimage from "./Section 01 (3).png";
+export{homeimage};
+
+import image from "./image.png";
+export{image};
+
+import image1 from "./image (1).png";
+export{image1};
+
+import image2 from "./image (2).png";
+export{image2};
+
+import image3 from "./image (3).png";
+export{image3};
+
+import image4 from "./image (4).png";
+export{image4};
+
+import image5 from "./image (5).png";
+export{image5};
+
+import Image1 from "./Image1.png";
+export{Image1};
+
+import Image2 from "./Image2.png";
+export{Image2};
+
+import Image3 from "./Image3.png";
+export{Image3};
+
+import picture1 from "./Picture1.png";
+export {picture1};
+
+import image6 from "./image (6).png";
+export{image6};
+
+import image7 from "./image (7).png";
+export{image7};
+
+import image8 from "./image (8).png";
+export{image8};
+
+import image9 from "./image (9).png";
+export{image9};
+
+import image10 from "./image (10).png";
+export{image10};
+
+import image11 from "./image (11).png";
+export{image11};
+
+import image12 from "./image (12).png";
+export{image12};
+
+import image13 from "./image (13).png";
+export{image13};
+
+import frame14 from "./Frame 14.png";
+export{frame14};
+
+import frame20 from "./Frame 20.png";
+export{frame20};
+
+import frame21 from "./Frame 21.png";
+export{frame21};
+
+import frame19 from "./Frame 19.png";
+export{frame19};
+
+import frame22 from "./Frame 22.png";
+export{frame22};
+
+import frame1 from "./Frame 1 (1).png";
+export{frame1};
+
+import frame2 from "./Frame 2.png";
+export {frame2};
+
+import frame3 from "./Frame 3.png";
+export {frame3};
+
+import frame from "./Frame 1 (3).png";
+export {frame};
+
+import pic from "./Frame 3 (1).png";
+export{pic};
+
+import image14 from  "./image (14).png";
+export{image14};
+
+import image15 from "./image (15).png";
+export {image15};
+
+import image16 from "./image (16).png";
+export{image16};
+
+import image17 from "./image (17).png";
+export{image17};
+
+import section1 from "./Section 01 (4).png";
+export{section1};
+
+import image18 from "./image (18).png";
+export{image18};
+
+import image19 from "./image (19).png";
+export {image19};
+
+import image20 from "./image (20).png";
+export{image20};
+
+import image21 from "./image (21).png";
+export{image21};
+
+import pic2 from "./Screenshot 2023-11-30 at 6.28 1.png";
+export{pic2};
+
+import image22 from "./image (22).png";
+export{image22};
+
+import image23 from "./image (23).png";
+export {image23};
+
+import image24 from "./image (24).png";
+export{image24};
+
+import image25 from "./image (25).png";
+export{image25};
+
+import image26 from "./image (26).png";
+export{image26};
+
+import image27 from "./image (27).png";
+export{image27};
+
+import image28 from "./image (28).png";
+export{image28};
+
+import image29 from "./image (29).png";
+export{image29};
+
+import image30 from "./image (30).png";
+export{image30};
+
+import image31 from "./image (31).png";
+export{image31};
+
+import image32 from "./image (32).png";
+export{image32};
+
+import image33 from "./image (33).png";
+export{image33};
+
+import Rectangle from "./Rectangle 3.png";
+export{Rectangle};
+
+import image34 from "./image (34).png";
+export{image34};
+
+import image35 from "./image (35).png";
+export{image35};
+
+import image36 from "./image (36).png";
+export{image36};
+
+import image37 from "./image (37).png";
+export{image37};
+
+import image38 from "./image (38).png";
+export{image38};
+
+import image39 from "./image (39).png";
+export{image39};
+
+import image40 from "./image (40).png";
+export{image40};
+
+import image41 from "./image (41).png";
+export{image41};
+
+import image42 from "./image (42).png";
+export{image42};
+
+import image43 from "./image (43).png";
+export{image43};
+  
+import section01 from "./Section 01 (5).png";
+export{section01};
+
+import twitter from "./twitter.png";
+export{twitter};
+
+import facebook from "./facebook.png";
+export{facebook};
+
+import linkedin from "./linkedin.png";
+export{linkedin};
+
+import section03 from "./Section 03 (1).png";
+export{section03};
+
+import image44 from "./image (44).png";
+export{image44};
+
+import image45 from "./image (45).png";
+export{image45};
+
+import image46 from "./image (46).png";
+export{image46};
+
+import image47 from "./image (47).png";
+export{image47};
+
+import image48 from "./image (48).png";
+export{image48};
+
+import image49 from "./image (49).png";
+export{image49};
+
+import star from "./Frame 1 (4).png";
+export{star};
+
+import image50 from "./image (50).png";
+export{image50};
+
+import image51 from "./image (51).png";
+export{image51};
+
+import image52 from "./image (52).png";
+export{image52};
+
+import image54 from "./image (54).png";
+export{image54};
+
+import image55 from "./image (55).png";
+export{image55};
+
+import image56 from "./image (56).png";
+export{image56};
+
+import image57 from "./image (57).png";
+export{image57};
+
+import image58 from "./image (58).png";
+export{image58};
+
+import picture from "./Frame 2 (1).png";
+export{picture};
+
+import image59 from "./image (59).png";
+export{image59};
+
+import image60 from "./image (60).png";
+export{image60};
+
+import van from "./download.png";
+export{van};
+
+import image61 from "./image (61).png";
+export{image61};
+
+import image62 from "./image (62).png";
+export{image62};
+
+import image63 from "./image (63).png";
+export{image63};
+
+import image64 from "./image (64).png";
+export{image64};
+
+import image65 from "./image (65).png";
+export{image65};
+
+import image66 from "./image (66).png";
+export{image66};
+
+import rating from "./Frame 2 (2).png";
+export{rating};
+
+import frame0 from "./Frame 2 (3).png";
+export{frame0};
+
+import ratings from "./Frame 4.png";
+export{ratings};
+
+import pricing1 from "./Frame 2 (4).png";
+export{pricing1};
+
+import sustainability from "./Screenshot 2023-11-30 at 5.19 1.png";
+export{sustainability};
+
+import cap from "./image (67).png";
+export{cap};
+
+
+
