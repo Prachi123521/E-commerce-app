@@ -7,14 +7,14 @@ import { FC } from "react";
 
 
 
-type PageProps = {
+type Props = {
   params: {
     productId: string;
   };
 };
 
 // Optional: dynamic title
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Product ${params.productId}`,
   };
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return <Product productId={productId} />;
 }*/}
 
-const ProductPage: FC<PageProps> = ({ params }) => {
+const ProductPage: FC<Props> = ({ params }) => {
   const { productId } = params;
   return <Product productId={productId} />;
 };
