@@ -53,7 +53,8 @@ const Everlane = () => {
           Everlane On You
         </p>
         <p className="text-sm sm:text-base font-light tracking-wide font-maison-neue mt-2 cursor-pointer hover:underline">
-          Share your latest look with #EverlaneOnYou for a chance to be featured.
+          Share your latest look with #EverlaneOnYou for a chance to be
+          featured.
         </p>
         <p className="text-sm underline cursor-pointer hover:text-blue-500 mt-1">
           Add Your Photo
@@ -72,7 +73,11 @@ const Everlane = () => {
         <Slider ref={sliderRef} {...settings}>
           {data.map((item) => (
             <div key={item.src} className="">
-              <img src={item.src} alt="Everlane user" className="w-full h-auto object-cover " />
+              <img
+                src={item.src}
+                alt="Everlane user"
+                className="w-full h-auto object-cover "
+              />
             </div>
           ))}
         </Slider>

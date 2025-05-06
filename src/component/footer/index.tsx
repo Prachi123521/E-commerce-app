@@ -98,7 +98,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h2 className="mb-6 text-sm font-bold text-gray-900  cursor-pointer hover:underline font-medium font-semibold leading-[24px] text-[16px] sm:text-[18px] lg:text-[20px] mb-4 sm:mb-6 mt-6 sm:mt-9 dark:text-white mt-9 tracking-[0.2]">
               Connect
@@ -130,9 +130,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-            </div>
-            
-          
+          </div>
 
           <div className="mt-6 sm:mt-9 flex flex-col sm:flex-row items-start  sm:items-center pb-43 justify-left">
             <h2>
@@ -142,18 +140,11 @@ const Footer = () => {
                 className="bg-white text-sm px-4 h-13 w-[280px] border border-gray-300  text-left "
               />
             </h2>
-            
-        
-              <button className="text-white  bg-stone-900 h-13  px-4 ">
-                <ArrowRight />
-              </button>
-              </div>
-            
-            
-          
 
-            
-    
+            <button className="text-white  bg-stone-900 h-13  px-4 ">
+              <ArrowRight />
+            </button>
+          </div>
 
           <FooterMenu />
 

@@ -6,7 +6,11 @@ const items = [
   { src: image14.src, title: "Women's Sweaters", category: "women" },
   { src: image15.src, title: "Women's Bottom", category: "women" },
   { src: image16.src, title: "Women's Boots", category: "women" },
+  { src: image16.src, title: "Women's Boot", category: "women" },
   { src: image17.src, title: "Men's Best Sellers", category: "men" },
+  { src: image17.src, title: "Men's Sweaters", category: "men" },
+  { src: image17.src, title: "Men's Trousers", category: "men" },
+  { src: image17.src, title: "Men's Trouser", category: "men" },
 ];
 
 export default function Search() {
@@ -18,13 +22,17 @@ export default function Search() {
   };
 
   const filteredItems = items.filter((item) => {
-    const matchesSearch = item.title
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
+    const search = searchTerm.toLowerCase();
+    const matchesTitle = item.title.toLowerCase().includes(search);
     const matchesCategory =
       selectedCategory === "all" || item.category === selectedCategory;
+    const matchesSearch =
+      matchesTitle ||
+      `${item.category} ${item.title}`.toLowerCase().includes(search);
     return matchesSearch && matchesCategory;
   });
+
+  const shouldShowPopular = searchTerm === "" && selectedCategory === "all";
 
   return (
     <div className="px-4 md:px-10 lg:px-20">
@@ -50,39 +58,77 @@ export default function Search() {
 
       {/* Category buttons */}
       <div className="mt-6 flex gap-4 lg:px-56">
-        <button
-          className={`text-sm font-maison-neue border px-4 py-1 rounded-full ${
-            selectedCategory === "all"
-              ? "bg-black text-white"
-              : "bg-white text-black"
-          }`}
-          onClick={() => setSelectedCategory("all")}
-        >
-          All
-        </button>
-        <button
-          className={`text-sm font-maison-neue border px-4 py-1 rounded-full ${
-            selectedCategory === "women"
-              ? "bg-black text-white"
-              : "bg-white text-black"
-          }`}
-          onClick={() => setSelectedCategory("women")}
-        >
-          Women
-        </button>
-        <button
-          className={`text-sm font-maison-neue border px-4 py-1 rounded-full ${
-            selectedCategory === "men"
-              ? "bg-black text-white"
-              : "bg-white text-black"
-          }`}
-          onClick={() => setSelectedCategory("men")}
-        >
-          Men
-        </button>
+        {["all", "women", "men"].map((category) => (
+          <button
+            key={category}
+            className={`text-sm font-maison-neue border px-4 py-1 rounded-full ${
+              selectedCategory === category
+                ? "bg-black text-white"
+                : "bg-white text-black"
+            }`}
+            onClick={() => {
+              setSelectedCategory(category);
+              setSearchTerm("");
+            }}
+          >
+            {category.charAt(0).toUpperCase() + category.slice(1)}
+          </button>
+        ))}
       </div>
 
-      {searchTerm && (
+      {!shouldShowPopular && (
+        <div className="mt-6 lg:px-20">
+          {searchTerm && (
+            <p className="tracking-wide font-normal text-sm mb-4">
+              Search Results
+            </p>
+          )}
+
+          {filteredItems.length > 0 ? (
+            <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4  ">
+              {filteredItems.map((item) => (
+                <div key={item.title} className="flex flex-col">
+                  <img src={item.src} alt={item.title} className="w-full" />
+                  <p className="mt-2 font-normal text-[14px] font-maison-neue underline hover:decoration-blue-400 cursor-pointer">
+                    {item.title}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-gray-500">No results found.</p>
+          )}
+        </div>
+      )}
+
+      {shouldShowPopular && (
+        <>
+          <div className="mt-9">
+            <hr />
+          </div>
+
+          {/* Popular Categories */}
+          <p className="tracking-wide font-normal text-sm mt-10 cursor-pointer hover:underline lg:px-20">
+            Popular Categories
+          </p>
+          <div className="mt-4 grid grid-cols-1  md:grid-cols-4 lg:px-20 gap-x-4 mb-12">
+            {items.map((item) => (
+              <div key={item.title} className="flex flex-col">
+                <img src={item.src} alt={item.title} className="w-full" />
+                <p className="mt-2 font-normal text-[14px] font-maison-neue underline hover:decoration-blue-400 cursor-pointer">
+                  {item.title}
+                </p>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+{
+  /* {searchTerm && (
         <div className="mt-6">
           <p className="tracking-wide font-normal text-sm mb-4 lg:px-20">
             Search Results
@@ -108,7 +154,7 @@ export default function Search() {
         <hr></hr>
       </div>
 
-      {/* Always Visible: Popular Categories */}
+  
       <p className="tracking-wide font-normal text-sm mt-10 cursor-pointer hover:underline lg:px-20">
         Popular Categories
       </p>
@@ -121,7 +167,5 @@ export default function Search() {
             </p>
           </div>
         ))}
-      </div>
-    </div>
-  );
+      </div>*/
 }

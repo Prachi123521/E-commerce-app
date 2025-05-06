@@ -283,4 +283,14 @@ export{frame0};
 import ratings from "./Frame 4.png";
 export{ratings};
 
+import pricing1 from "./Frame 2 (4).png";
+export{pricing1};
+
+import sustainability from "./Screenshot 2023-11-30 at 5.19 1.png";
+export{sustainability};
+
+import cap from "./image (67).png";
+export{cap};
+
+
 

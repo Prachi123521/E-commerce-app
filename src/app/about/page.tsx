@@ -19,7 +19,7 @@ const data = [
 
 const About = () => {
   return (
-    <div className="px-4 sm:px-8 md:px-12">
+    <div className="overflow-x-hidden px-4 sm:px-8 md:px-12">
       <div className="text-center mt-12">
         <img
           src={section1.src}
@@ -37,13 +37,15 @@ const About = () => {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-stretch mt-16 ">
-        <img
-          src={image18.src}
-          alt=""
-          className="w-full lg:w-1/2 h-auto object-cover "
-        />
-        <div className="bg-neutral-200 p-6 lg:p-10 w-full lg:w-1/2  flex flex-col justify-center">
+      <div className="flex flex-wrap items-stretch mt-16 ">
+        <div className="flex-none w-full lg:w-1/2">
+          <img
+            src={image18.src}
+            alt=""
+            className="max-w-full h-auto object-cover "
+          />
+        </div>
+        <div className="flex-none bg-neutral-200 p-6 lg:p-10 w-full lg:w-1/2  flex flex-col justify-center">
           <p className="text-xs  font-maison-neue font-maison-neue font-semibold hover:underline cursor-pointer tracking-wide">
             OUR FACTORIES
           </p>
@@ -69,7 +71,7 @@ const About = () => {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row items-stretch mt-16">
+      <div className=" flex-none flex flex-col lg:flex-row items-stretch mt-16">
         <div className="w-full lg:w-1/2 bg-red-50 p-6 lg:p-10 flex flex-col justify-center">
           <p className="text-xs mb-2 font-maison-neue hover:underline hover:decoration-blue-400 cursor-pointer font-semibold">
             OUR QUALITY

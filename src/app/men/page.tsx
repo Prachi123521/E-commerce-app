@@ -9,6 +9,7 @@ import {
   image56,
   image57,
   image58,
+  rating,
 } from "@/assets";
 
 const data = [
@@ -20,6 +21,7 @@ const data = [
     discountedPrice: "$132",
     title1: "Black",
     category: "Cardigan",
+    rating: 4.5,
   },
   {
     id: 2,
@@ -30,6 +32,7 @@ const data = [
     title1: "Black",
     title2: "ORGANIC COTTON",
     category: "Long-Sleeve",
+    rating: 4,
   },
   {
     id: 3,
@@ -41,6 +44,7 @@ const data = [
     title2: "RENWED MATERIALS",
     title3: "CLEANER CHEMISTRY",
     category: "Pant",
+    rating: 5,
   },
   {
     id: 4,
@@ -50,6 +54,7 @@ const data = [
     discountedPrice: "$32",
     title1: "Black",
     category: "Cardigan",
+    rating: 3.5,
   },
   {
     id: 5,
@@ -60,6 +65,7 @@ const data = [
     title1: "Black",
     title2: "ORGANIC COTTON",
     category: "Long-Sleeve",
+    rating: 4,
   },
   {
     id: 6,
@@ -71,6 +77,7 @@ const data = [
     title2: "RENWED MATERIALS",
     title3: "CLEANER CHEMISTRY",
     category: "Pant",
+    rating: 3.5,
   },
   {
     id: 7,
@@ -80,6 +87,7 @@ const data = [
     discountedPrice: "$132",
     title1: "Black",
     category: "Cardigan",
+    rating: 5,
   },
   {
     id: 8,
@@ -90,6 +98,7 @@ const data = [
     title1: "Black",
     title2: "ORGANIC COTTON",
     category: "Long-Sleeve",
+    rating: 4.5,
   },
   {
     id: 9,
@@ -101,6 +110,7 @@ const data = [
     title2: "RENWED MATERIALS",
     title3: "CLEANER CHEMISTRY",
     category: "Pant",
+    rating: 3.5,
   },
 ];
 

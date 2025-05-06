@@ -15,13 +15,13 @@ const Collections1 = () => {
       {/* Gift Picks Images with Overlay Text */}
       <div className="flex flex-col lg:flex-row justify-center items-center gap-6 mt-12 px-4 sm:px-8 lg:px-28">
         {/* Image 1 */}
-        <div className="relative w-full max-w-sm">
+        <div className="relative w-full max-w-sm pt-10">
           <img
             src={image12.src}
             alt="Gift 1"
             className="w-full h-auto object-cover "
           />
-          <p className="absolute top-[-36] left-1/2 transform -translate-x-1/2 text-sm sm:text-base font-maison-neue bg-white/80 px-3 py-1 rounded hover:underline cursor-pointer">
+          <p className="absolute -top-2 left-1/2  transform -translate-x-1/2 text-sm sm:text-base font-maison-neue bg-white/80 px-3 py-1 rounded hover:underline cursor-pointer">
             Our Holiday Gift Picks
           </p>
 
@@ -34,13 +34,13 @@ const Collections1 = () => {
         </div>
 
         {/* Image 2 */}
-        <div className="relative w-full max-w-sm">
+        <div className="relative w-full max-w-sm pt-10">
           <img
             src={image13.src}
             alt="Gift 2"
             className="w-full h-auto object-cover"
           />
-          <p className="absolute top-[-36] left-1/2 transform -translate-x-1/2 text-sm sm:text-base font-maison-neue bg-white/80 px-3 py-1 rounded hover:underline cursor-pointer">
+          <p className="absolute -top-2 left-1/2  transform -translate-x-1/2 text-sm sm:text-base font-maison-neue bg-white/80 px-3 py-1 rounded hover:underline cursor-pointer">
             Cleaner Fashion
           </p>
           <p className="text-xs sm:text-sm font-maison-neue tracking-wide hover:underline text-center">
