@@ -17,26 +17,27 @@
 // app/men/[productId]/page.tsx
 import { Metadata } from "next";
 import Product from "../page";
+import { FC } from "react";
 
 // app/men/page.tsx
 
 
 
 
-type Props = {
+type PageProps = {
   params: {
     productId: string;
   };
 };
 
 // Optional: dynamic title
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   return {
     title: `Product ${params.productId}`,
   };
 }
 
-export default function ProductPage({ params }: Props) {
+export default function ProductPage({ params }:PageProps) {
   const { productId } = params;
 
   return <Product productId={productId} />;

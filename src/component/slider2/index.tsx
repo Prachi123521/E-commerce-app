@@ -93,7 +93,7 @@ const Slider2 = () => {
       {/* Slider */}
       <Slider ref={sliderRef} {...settings}>
         {data.map((item, index) => (
-          <div key={index} className=" ">
+          <div key={index} >
             <img
               src={item.src}
               alt={item.title1}
