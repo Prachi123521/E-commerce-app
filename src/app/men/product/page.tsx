@@ -161,13 +161,11 @@ const Product = ({ productId }: { productId: string }) => {
   );
 
   const [showCart, setShowCart] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+ {/* const [isOpen, setIsOpen] = useState(false);*/}
 
   const [selectedColor, setSelectedColor] = useState("black");
   const [selectedSize, setSelectedSize] = useState("XS");
-  {
-    /*const selectedProduct = data.find((item) => item.id === productId);*/
-  }
+ 
   const id = Number(productId);
   const selectedProduct = data.find((item) => String(item.id) === String(id));
   console.log("Looking for product with ID:", productId);
@@ -188,8 +186,8 @@ const Product = ({ productId }: { productId: string }) => {
     return () => clearTimeout(timer);
   }, [productId, loading]);
 
-  const openDrawer = () => setIsOpen(true);
-  const closeDrawer = () => setIsOpen(false);
+  {/*const openDrawer = () => setIsOpen(true);
+  const closeDrawer = () => setIsOpen(false);*/}
 
   const [sortOrder, setSortOrder] = useState("highest");
   const sortedReviews = [...reviewData].sort((a, b) => {
@@ -591,7 +589,7 @@ const Product = ({ productId }: { productId: string }) => {
               Model
             </h3>
             <p className="mt-5 tracking-[1.4px] leading-[16.8px] text-[14px] cursor-pointer hover:underline hover:decoration-blue-400  font-normal">
-              Model is 6'2" , wearing a size M
+              Model is 6&apos;2&quot; , wearing a size M
             </p>
           </div>
 
@@ -659,9 +657,9 @@ const Product = ({ productId }: { productId: string }) => {
         </div>
 
         <div className="flex flex-col space-y-1">
-          {[5, 4, 3, 2, 1].map((rating, index) => {
+          {[5, 4, 3, 2, 1].map((rating) => {
             const count = ratingCounts[rating] || 0;
-            const percentage = (count / totalReviews) * 100;
+          
 
             return (
               <div key={rating} className="flex items-center space-x-3">
@@ -761,7 +759,7 @@ const Product = ({ productId }: { productId: string }) => {
               </div>
               <div className="mt-2 text-xs text-gray-700 font-semibold">
                 <p>
-                  <b>Height</b>: 5'9"
+                  <b>Height</b>: 5&apos;9&quot;
                 </p>
                 <p>
                   <b>Weight</b>: 160 lbs

@@ -9,7 +9,7 @@ import {
   image56,
   image57,
   image58,
-  rating,
+
 } from "@/assets";
 
 const data = [

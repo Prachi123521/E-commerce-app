@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import HeaderMenu from "../headermenu";
 import Logo from "../logo";
-import Container from "../container";
 import SearchBar from "../searchbar";
 import CartIcon from "../carticon";
 import User from "../user";
